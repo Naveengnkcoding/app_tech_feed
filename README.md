@@ -1,1 +1,0 @@
-# app_tech_feed
