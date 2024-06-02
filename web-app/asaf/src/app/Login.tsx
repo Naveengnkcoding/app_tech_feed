@@ -6,9 +6,9 @@ const Login = () => {
     return(
     <div>
         {/* bg-gray-50 */}
-        <section className="bg-[#D3D3D3] dark:bg-[#0056b9] font-roboto ">
-  <div className="flex flex-col items-center justify-center px-6 py-40 mx-auto md:h-screen md:w-screen lg:py-0">
-      <div className="w-full bg-white rounded-sm shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <section className="bg-[#D3D3D3] dark:bg-[#0056b9] font-roboto h-full overflow-hidden">
+  <div className="flex flex-col items-center justify-center px-6 py-20 mx-auto md:h-screen md:w-screen lg:py-0 lg:h-screen lg:w-screen xl:h-screen xl:w-screen">
+      <div className="w-full h-auto bg-white rounded-sm shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
       <a href="#" className="flex items-center justify-center text-2xl font-semibold text-gray-900 dark:text-white">
           <img className="w-[50%] h-auto p-6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_HKLxlwH7VAJzZLN-BFB11PQVhpw9aafoMAEbCzIAn7xvXIKGzqcbctsDlteeaYXsQ&usqp=CAU" alt="logo" />
           {/* Flowbite     */}
