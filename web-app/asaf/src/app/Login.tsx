@@ -6,7 +6,7 @@ const Login = () => {
     return(
     <div>
         {/* bg-gray-50 */}
-        <section className="bg-[#D3D3D3] dark:bg-[#0056b9] font-roboto h-full overflow-hidden">
+        <section className="bg-[#D3D3D3] dark:bg-[#0056b9] h-full overflow-hidden">
   <div className="flex flex-col items-center justify-center px-6 py-20 mx-auto md:h-screen md:w-screen lg:py-0 lg:h-screen lg:w-screen xl:h-screen xl:w-screen">
       <div className="w-full h-auto bg-white rounded-sm shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
       <a href="#" className="flex items-center justify-center text-2xl font-semibold text-gray-900 dark:text-white">

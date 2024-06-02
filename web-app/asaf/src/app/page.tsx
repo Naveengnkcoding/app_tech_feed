@@ -5,7 +5,7 @@ import Footer from "./Footer";
 export default function Home() {
   return (
     <div>
-      <div className="h-[100vh]">
+      <div className="font-roboto">
         <Login />
         <Footer />
       </div>
