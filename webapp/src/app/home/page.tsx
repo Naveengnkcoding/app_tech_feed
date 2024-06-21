@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { AppProps } from 'next/app'
 import React from "react";
 import Sidebar from "../Sidebar";
+import Dashboard from "../dashboard/page";
 
 const Home = () => { 
     return(
@@ -215,6 +216,7 @@ const Home = () => {
         </tbody>
     </table>
 </div>
+<Dashboard />
         </div>
     )
 }
