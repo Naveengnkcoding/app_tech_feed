@@ -7,16 +7,18 @@ import Stat from "../subcomponents/Stat";
 const Dashboard = () => {
   return (
     <div className="h-screen text-black">
-      <div className="flex flex-col flex-wrap items-center justify-center mt-10 max-w-4xl mx-auto">
-        <div className="flex flex flex-wrap p-8 gap-20">
-            <div className="bg-white px-20 py-20 justify-center items-center rounded-md shadow-lg">
+      <div className="flex flex-col gap-8 flex-wrap items-center justify-center mt-10 max-w-4xl mx-auto">
+        <div className="flex flex flex-wrap gap-10">
+            <div className="bg-white px-20 py-20 rounded-md shadow-lg">
+              <a className="text-md font-bold">Customers</a>
               <Stat 
                 img=""
                 num={2000}
-                desc="Profit"
+                desc="Loss"
               />
             </div>
             <div className="bg-white px-20 py-20 rounded-md shadow-lg">
+            <a className="text-md font-bold">Employees</a>
               <Stat 
                 img=""
                 num={10000}
@@ -24,18 +26,20 @@ const Dashboard = () => {
               />
             </div>
             </div>
-        <div className="flex flex justify-center items-center flex-wrap p-8 gap-20">
+            <div className="flex flex-wrap gap-10">
             <div className="bg-white px-20 py-20 rounded-md shadow-lg">
+            <a className="text-md font-bold">Orders</a>
               <Stat 
                 img=""
-                num={300}  
+                num={3000}  
                 desc="Loss"
               />
             </div>
             <div className="bg-white px-20 py-20 rounded-md shadow-lg">
+            <a className="text-md font-bold">Services</a>
               <Stat 
                 img=""
-                num={100}
+                num={1000}
                 desc="Profit"
               />
             </div>
