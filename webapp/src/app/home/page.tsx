@@ -6,7 +6,7 @@ import Dashboard from "../dashboard/page";
 
 const Home = () => { 
     return(
-        <div>
+        <div className="scroll-smooth">
             <Sidebar /> 
             <div className="relative overflow-x-auto  sm:rounded-lg p-8">
     <table className="w-full shadow-md text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
