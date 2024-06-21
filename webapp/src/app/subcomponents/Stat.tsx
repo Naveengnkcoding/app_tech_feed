@@ -35,7 +35,7 @@ const Stat = ({ img, num, desc }: StatProps) => {
 
   return (
     <div className="flex gap-3" ref={ref}>
-      <div className="relative w-[50px] h-[60px]">
+      {/* <div className="relative w-[50px] h-[60px]">
         <Image
           src={img}
           alt="img"
@@ -43,7 +43,7 @@ const Stat = ({ img, num, desc }: StatProps) => {
           objectFit="contain"
           objectPosition="center"
         />
-      </div>
+      </div> */}
       <div className="flex flex-col text-left p-1">
         <a className="text-black font-bold text-lg">
           {countNum}

@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <div>
       <div className="font-roboto scroll-smooth">
-        <Sidebar />
         <Login />
         <Footer />
       </div>
