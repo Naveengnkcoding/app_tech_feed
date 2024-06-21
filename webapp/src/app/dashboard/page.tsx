@@ -7,12 +7,15 @@ import Stat from "../subcomponents/Stat";
 const Dashboard = () => {
   return (
     <div className="h-screen text-black">
-      <div className="flex flex-wrap justify-center mt-10 max-w-4xl mx-auto">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <div className="flex flex-col flex-wrap justify-center mt-10 max-w-4xl mx-auto">
+        <div className="flex flex-wrap"></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div className="flex flex-col flex-wrap">
+            <div></div>
+            <div></div>
+        </div>
     </div>
   );
 };
