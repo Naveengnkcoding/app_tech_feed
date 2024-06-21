@@ -1,10 +1,10 @@
 import Image from "next/image";
 import type { AppProps } from 'next/app'
 import React from "react";
-
+// import Sidebar from "../Sidebar";
 const Dashboard = () => {
     return(
-        <div className="h-screen bg-cyan-800">
+        <div className="h-screen text-black">
             Dashboard
         </div>
     )
