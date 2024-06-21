@@ -7,9 +7,9 @@ const Home = () => {
     return(
         <div>
             <Sidebar /> 
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg p-8">
-    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs  border-b text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <div className="relative overflow-x-auto  sm:rounded-lg p-8">
+    <table className="w-full shadow-md text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead className="text-xs font-bold border-b text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" className="px-6 py-3">                    
                     S.no
