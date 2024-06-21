@@ -35,7 +35,7 @@ const Dashboard = () => {
             <div className="bg-white px-20 py-20 rounded-md shadow-lg">
               <Stat 
                 img=""
-                num={100000}
+                num={100}
                 desc="Profit"
               />
             </div>
