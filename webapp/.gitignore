@@ -1,1 +1,10 @@
 node_modules
+trace
+.next/cache/webpack
+app-build-manifest.json
+build-manifest.json
+react-loadable-manifest.json
+.next/package.json
+.next/static/webpack
+.next/cache/webpack/client-development
+.next/cache/webpack/server-development
