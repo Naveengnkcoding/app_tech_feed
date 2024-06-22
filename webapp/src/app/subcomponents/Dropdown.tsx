@@ -9,7 +9,7 @@ const Dropdown = () => {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-center">
       <div>
         <button
           type="button"
@@ -18,11 +18,10 @@ const Dropdown = () => {
           aria-expanded="true"
           aria-haspopup="true"
           onClick={toggleDropdown}
-        >
-         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-</svg>
+        ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+        <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+      </svg>
         </button>
       </div>
 
@@ -36,7 +35,7 @@ const Dropdown = () => {
           <div className="py-1 " role="none">
             <a
               href="/#"
-              className="text-gray-700 block px-4 py-2 text-sm"
+              className="text-gray-700 font-bold block px-4 py-2 text-sm"
               role="menuitem"
               id="menu-item-0"
             >
@@ -48,24 +47,17 @@ const Dropdown = () => {
               role="menuitem"
               id="menu-item-1"
             >
-              Admin
+              Administrator
             </a>
-            <div className='flex justify-between'>
-              <div>
               <a
               href="/#"
-              className="text-gray-700 block px-4 py-2 text-sm"
+              className="flex text-center gap-1 justify-center items-center text-gray-700 block px-4 py-2 text-sm"
               role="menuitem"
               id="menu-item-2"
             >
-              Active
+              Active<div className="w-2 h-2 my2 bg-green-500 rounded-full animate-pulse"></div>
             </a>
-            </div>
-            <div className='p-4'>
-              <div className="flex py-1 px-1 w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            </div>
-            </div>
-            <form method="POST" action="#" role="none">
+            <form className='inline-flex justify-center' method="POST" action="#" role="none">
               <button
                 type="submit"
                 className="text-gray-700 block w-full text-left px-4 py-2 text-sm"
@@ -74,6 +66,10 @@ const Dropdown = () => {
               >
                 Logout
               </button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className=" text-blue-600 my-4 bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fillRule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fillRule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                    </svg>  
             </form>
           </div>
         </div>
