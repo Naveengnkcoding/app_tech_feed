@@ -11,7 +11,6 @@ const Login = () => {
       <div className="w-full h-auto bg-white rounded-sm shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
       <a href="#" className="flex items-center justify-center text-2xl font-semibold text-gray-900 dark:text-white">
           <img className="w-[50%] h-auto p-6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_HKLxlwH7VAJzZLN-BFB11PQVhpw9aafoMAEbCzIAn7xvXIKGzqcbctsDlteeaYXsQ&usqp=CAU" alt="logo" />
-          {/* Flowbite     */}
       </a>
           <div className="p-4 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
@@ -37,7 +36,7 @@ const Login = () => {
                       </div>
                       
                   </div>
-                  <button type="submit" className="w-full text-white bg-primary-600 bg-[#0056b9] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-md px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"> Login</button>
+                  <a href="/home" className="text-white no-underline"><button type="submit" className="w-full text-white bg-primary-600 bg-[#0056b9] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-md px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"> Login</button></a>
                   <p className="flex items-center justify-between text-sm font-light text-gray-500 dark:text-gray-400">
                     <a href="#" className="font-medium text-gray-400 text-left hover:underline hover:text-black dark:text-primary-500">New Registration?</a>
                     <a href="#" className="text-sm font-medium text-gray-400 hover:underline hover:text-black dark:text-primary-500">Forgot password?</a>
