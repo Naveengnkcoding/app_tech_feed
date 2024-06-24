@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        @font-face { font-family: Outfit; src: url('Outfit-Regular.ttf'); }
+      body {
+        background-color: rgb(206, 162, 209);
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Outfit;;
+      }
+      .main{
+        margin: 5vw;
+        display: block;
+        background-color: #ffffff;
+        width: 90vw;
+        max-width: 600px;
+        height: 90vh;
+        padding: 5vw;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .but{
+        width: 30vw;
+        height: 5vh;
+        max-height: 43px;
+        font-weight: bold;
+        background-color: transparent;
+        color: rgb(152, 24, 191);
+        border: 2px solid rgb(152, 24, 191);
+        padding: 9px;
+        border-radius: 3px;
+      }
+      .inp{
+        margin-top: 1vh;
+        color: black;
+        background-color: transparent;
+        font-size: 16px;
+        border: 2px solid lightgrey;
+        border-radius: 4px;
+        padding: 4px;
+        padding-left: 10px;
+        width: 70vw;
+        min-height: 32px;
+        height: 4.5vh;
+        margin-bottom: 2vh;
+      }
+      form{
+        text-align: left;
+        padding: 3vw;
+        min-height: 50vh;
+        max-height: 70vh;
+        overflow-y: scroll;
+      } 
+      .head{
+        padding: 2vw;
+        margin: 0;
+        height: 12vh;
+        border-bottom: 2px solid lightgrey;
+      }
+      .foot{
+        text-align: center;
+        width: 100%;
+        height: 8vh;
+        padding: 3vw 0 3vw 0;
+        display: inline-block;
+      }
+      hr{
+        opacity: 30%;
+      }
+      h2{
+        margin: 0;
+        margin-bottom: 3vh;
+        text-align: center;
+      }
+      h3{
+        text-align: left;
+        margin: 0;
+      }
+      .dis{
+        background-color: lightgrey;
+      }
+      textarea:focus, input:focus{
+        outline: none;
+        border: 2px solid magenta;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        margin: none;
+        border: none;
+        padding:  none;
+        height: auto;
+    }
+    .prgs-con{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      max-width: 100%;
+      width: 350px;
+      padding-bottom: 1vh;
+    }
+    .cir{
+      width: 25px;
+      height: 25px;
+      line-height: normal;
+      border-radius: 50%;
+      background-color: white;
+      text-align: center;
+      vertical-align: middle;
+      border: 3px solid lightgrey;
+    }
+    label{
+      text-align: left;
+    }
+    .progress {
+      background-color: grey;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 0%;
+      z-index: -1;
+      transition: 0.4s ease;
+    }
+    .cir.act{
+    border-color: blue;
+    }
+    .cir.fil{
+      background-color: blue;
+      border-color: blue;
+      color: white;
+    }
+    .ivw{
+      margin: 2vw;
+      text-align: center;
+      border-radius: 3vw;
+      width: 70vw;
+      background-color: lightgrey;
+      height: 14vh;
+      line-height: 14vh;
+      vertical-align: middle;
+    }
+    .txta{
+      height: auto;
+      min-height: 60px;
+      height: 10vh;
+      font-size: 14px;
+    }
+    </style>
+  </head>
+    <div class="main">
+      <div class="head">
+      <h1>Welcome!&nbsp;&nbsp;<a style="color: darkblue;">Yaskawa</a></h1>
+      <br>
+      <div class="prgs-con">
+          <div class="progress" id="progress"></div>
+          <div class="cir fil">1</div>
+          <div class="cir act">2</div>
+          <div class="cir">3</div>
+          <div class="cir">4</div>
+          <div class="cir">5</div>
+          <div class="cir">6</div>
+      </div>
+      </div><!---------New Form 1 Start -->
+      <form id="index" style="display: none;">   
+      <h2>New  Application</h2>
+      <h3>Company Name</h3>
+        <input type="text" class="inp" placeholder="Company Name" required>
+        <h3>Engineer Name</h3>
+        <input type="text" class="inp" placeholder="Engineer Name" required>
+        <h3>Generate Token Number</h3>
+        <input type="text" class="inp dis" placeholder="#Generated Automatically" disabled>
+        <!-- <select class="inp">
+            <option value="">Yaskawa Drive</option>
+            <option value="">Others</option>
+        </select>
+        <input type="text" class="inp" placeholder="Name"> -->
+        <br><br><br><br>
+      </form>
+      <!---------New Form 2 Start -->
+      <form id="form2" style="display: none;">
+      <h2>Customer Info</h2>
+        <label>Customer Name</label>
+        <input type="text" class="inp" placeholder="Customer Name" required>
+        <label>Address</label>
+        <input type="text" class="inp" placeholder="Address" required>
+        <br>
+        <label>Gst No</label>
+        <input type="text" class="inp" placeholder="Gst No" required>
+      </form>
+      <!---------New Form 3 Start -->
+      <form id="form3" style="display: none;">
+        <h2>Drive Details</h2>
+          <label>Drive Type</label>
+          <select class="inp">
+            <option value="">Yaskawa Drive</option>
+            <option value="">Others</option>
+          </select>
+          <label>Model</label>
+          <input type="text" class="inp" placeholder="Drive Model" required>
+          <label>KW</label>
+          <input type="text" class="inp" placeholder="Drive Kw" required>
+          <label>AMPS.</label>
+          <input type="text" class="inp" placeholder="Amps" required>
+          <br>
+          <label>Drive img</label>
+          <input id="dimg" type="file" accept="image/*;capture=camera">
+          <div class="ivw">
+            <img src="#" alt="Upload img to preview" id="divw" style="object-fit:cover; border-radius: 3vw;width:100%;height:100%;">
+          </div>
+        </form>
+        <!---------New Form 4 Start -->
+        <form id="form4" style="display: one;">
+          <h2>Work Details</h2>
+          <label>Work Taken</label>
+          <textarea class="inp txta" placeholder="Work Taken......"></textarea>
+          <label>Service Type</label>
+          <select class="inp">
+            <option value="">New Drive Install</option>
+            <option value="">Service Only</option>
+            <option value="">Field Check Only</option>
+          </select>
+          <!-------Only for  Service Only -->
+          <label>Alarm & Error Faced by Customer</label>
+          <textarea class="inp txta" placeholder="Alarm Faced By Customer......"></textarea>
+          <label>Alarm img</label>
+          <input id="aimg" type="file" accept="image/*;capture=camera">
+          <div class="ivw">
+            <img src="#" alt="Upload img to preview" id="aivw" style="object-fit:cover; border-radius: 3vw;width:100%;height:100%;">
+          </div>
+          <label>Work Status</label><br>
+          &nbsp;&nbsp;&nbsp;
+          <input type="radio" id="rws1" name="wsts" value="">
+          <label for="rws1">Completed</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" id="rws2" name="wsts" value="">
+          <label for="rws2">No</label>
+          <br><br>
+          <label>Taken for Office</label><br>
+          &nbsp;&nbsp;&nbsp;
+          <input type="radio" id="tws1" name="tkn" value="">
+          <label for="tws1">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" id="tws2" name="tkn" value="">
+          <label for="tws2">No</label>
+        </form>
+        <!---------aLL Form Ends HERE -->
+
+      <div class="foot">
+        <a class="but" style="float: left">Back</a>
+        <a class="but" style="float: right" onclick="">Save >>></a>
+      </div>      
+    </div>
+    <script>
+            // Get the input element
+      const imageUpload = document.getElementById('dimg');
+      // Add an event listener to detect file upload
+      imageUpload.addEventListener('change', function() {
+        // Get the selected file
+        const file = imageUpload.files[0];
+        // Create a FileReader object
+        const reader = new FileReader();
+        // Set up the reader's onload event handler
+        reader.onload = function(e) {
+          // Get the image data URL
+          const imageDataUrl = e.target.result;
+          // Display the uploaded image
+          const imagePreview = document.getElementById('divw');
+          imagePreview.src = imageDataUrl;
+        };
+        // Read the selected file as Data URL
+        reader.readAsDataURL(file);
+      });
+      const aimageUpload = document.getElementById('aimg');
+      // Add an event listener to detect file upload
+      aimageUpload.addEventListener('change', function() {
+        // Get the selected file
+        const file = aimageUpload.files[0];
+        // Create a FileReader object
+        const reader = new FileReader();
+        // Set up the reader's onload event handler
+        reader.onload = function(e) {
+          // Get the image data URL
+          const aimageDataUrl = e.target.result;
+          // Display the uploaded image
+          const aimagePreview = document.getElementById('aivw');
+          aimagePreview.src = aimageDataUrl;
+        };
+        // Read the selected file as Data URL
+        reader.readAsDataURL(file);
+      });
+    </script>
+  </body>
+</html>
