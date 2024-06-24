@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Dropdown from "./subcomponents/Dropdown";
+import Link from "next/link";
 
 const Sidebar = () => {
   // State to manage the open/close state of the sidebar
@@ -29,22 +31,22 @@ const Sidebar = () => {
             />
           </div>
           <div className="flex flex-col gap-6 p-2">
-            <a
+            <Link
               href="/home"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
               Home
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-6 p-2">
-            <a
+            <Link
               href="/dashboard"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
               Dashboard
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-6 p-2">
             <a
@@ -56,22 +58,22 @@ const Sidebar = () => {
             </a>
           </div>
           <div className="flex flex-col gap-6 p-2">
-            <a
+            <Link
               href="/employees"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
               Employees
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-6 p-2">
-            <a
+            <Link
               href="/settings"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
               Settings
-            </a>
+            </Link>
           </div>
           {/* Add more sidebar items here */}
         </div>
@@ -120,21 +122,7 @@ const Sidebar = () => {
           </div>
         </div>
         <div className="flex p-3">
-        <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              color="black"
-              fill="currentColor"
-              className="bi bi-person-circle cursor-pointer"
-              viewBox="0 0 16 16"
-            >
-              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-              <path
-                fillRule="evenodd"
-                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-              />
-            </svg>
+          <Dropdown />
         </div>
       </div>
     </div>

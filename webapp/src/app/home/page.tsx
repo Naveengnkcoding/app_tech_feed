@@ -3,12 +3,15 @@ import type { AppProps } from 'next/app'
 import React from "react";
 import Sidebar from "../Sidebar";
 import Dashboard from "../dashboard/page";
+import Customers from "../customers/page";
+import Employees from "../employees/page";
+import Settings from "../settings/page";
 
 const Home = () => { 
     return(
         <div className="scroll-smooth">
             <Sidebar /> 
-            <div className="relative overflow-x-auto  sm:rounded-lg p-8">
+            <div className="relative h-screen overflow-x-auto overflow-y-auto  sm:rounded-lg p-8">
     <table className="w-full shadow-md text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead className="text-xs font-bold border-b text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -217,6 +220,9 @@ const Home = () => {
     </table>
 </div>
 <Dashboard />
+<Customers />
+<Employees />
+<Settings />
         </div>
     )
 }
