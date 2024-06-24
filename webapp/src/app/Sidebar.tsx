@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Dropdown from "./subcomponents/Dropdown";
+import Link from "next/link";
 
 const Sidebar = () => {
   // State to manage the open/close state of the sidebar
@@ -30,22 +31,22 @@ const Sidebar = () => {
             />
           </div>
           <div className="flex flex-col gap-6 p-2">
-            <a
+            <Link
               href="/home"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
               Home
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-6 p-2">
-            <a
+            <Link
               href="/dashboard"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
               Dashboard
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-6 p-2">
             <a
@@ -57,22 +58,22 @@ const Sidebar = () => {
             </a>
           </div>
           <div className="flex flex-col gap-6 p-2">
-            <a
+            <Link
               href="/employees"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
               Employees
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-6 p-2">
-            <a
+            <Link
               href="/settings"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
               Settings
-            </a>
+            </Link>
           </div>
           {/* Add more sidebar items here */}
         </div>

@@ -3,6 +3,9 @@ import type { AppProps } from 'next/app'
 import React from "react";
 import Sidebar from "../Sidebar";
 import Dashboard from "../dashboard/page";
+import Customers from "../customers/page";
+import Employees from "../employees/page";
+import Settings from "../settings/page";
 
 const Home = () => { 
     return(
@@ -217,6 +220,9 @@ const Home = () => {
     </table>
 </div>
 <Dashboard />
+<Customers />
+<Employees />
+<Settings />
         </div>
     )
 }
