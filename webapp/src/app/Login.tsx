@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { AppProps } from "next/app";
 import React from "react";
+import Link from "next/link";
 
 const Login = () => {
   return (
@@ -58,7 +59,7 @@ const Login = () => {
                           </div> */}
                   </div>
                 </div>
-                <a href="/home" className="text-white no-underline">
+                <Link href="/home" className="text-white no-underline">
                   <button
                     type="submit"
                     className="w-full text-white bg-primary-600 bg-[#0056b9] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-md px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
@@ -66,7 +67,7 @@ const Login = () => {
                     {" "}
                     Login
                   </button>
-                </a>
+                </Link>
                 <p className="flex items-center justify-between text-sm font-light text-gray-500 dark:text-gray-400">
                   <a
                     href="#"
