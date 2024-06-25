@@ -4,7 +4,7 @@ import React from "react";
 
 const Settiings = () => {
     return(
-        <div>
+        <div className="text-black bg-white text-3xl h-screen font-bold text-center" id="settings">
             Settings
         </div>
     )
