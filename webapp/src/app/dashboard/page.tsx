@@ -5,7 +5,7 @@ import Stat from "../subcomponents/Stat";
 
 const Dashboard = () => {
   return (
-    <div className="bg-white h-[50vh ] text-black " id="dashboard">
+    <div className="bg-gray-200 h-[50vh ] text-black " id="dashboard">
       <div className="flex justify-center text-2xl text-black font-bold py-4">
         Dashboard
       </div>
