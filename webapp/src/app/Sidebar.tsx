@@ -32,7 +32,7 @@ const Sidebar = () => {
           </div>
           <div className="flex flex-col gap-6 p-2">
             <Link
-              href="#home"
+              href="/home"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
@@ -41,7 +41,7 @@ const Sidebar = () => {
           </div>
           <div className="flex flex-col gap-6 p-2">
             <Link
-              href="#dashboard"
+              href="/dashboard"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
@@ -50,7 +50,7 @@ const Sidebar = () => {
           </div>
           <div className="flex flex-col gap-6 p-2">
             <a
-              href="#customers"
+              href="/customers"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
@@ -59,7 +59,7 @@ const Sidebar = () => {
           </div>
           <div className="flex flex-col gap-6 p-2">
             <Link
-              href="#employees"
+              href="/employees"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >
@@ -68,7 +68,7 @@ const Sidebar = () => {
           </div>
           <div className="flex flex-col gap-6 p-2">
             <Link
-              href="#settings"
+              href="/settings"
               className="text-black text-lg font-bold
                           hover:text-[#0056b9] hover:border-l-4 border-[#0056b9]"
             >

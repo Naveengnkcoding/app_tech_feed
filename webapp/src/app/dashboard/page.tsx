@@ -14,7 +14,7 @@ const Dashboard = () => {
           <div className="p-6 bg-white shadow rounded-2xl ">
             <dl className="space-y-2">
               <dt className="text-sm font-medium text-gray-500 ">
-                Customers
+                Services
               </dt>
               <dd className="text-5xl font-light md:text-6xl dark:text-white">
                 <Stat img="" num={2000} desc="" />
@@ -48,7 +48,7 @@ const Dashboard = () => {
           <div className="p-6 bg-white shadow rounded-2xl ">
             <dl className="space-y-2">
               <dt className="text-sm font-medium text-gray-500 ">
-                Employees
+                Customers
               </dt>
 
               <dd className="text-5xl font-light md:text-6xl ">
@@ -86,7 +86,7 @@ const Dashboard = () => {
           <div className="p-6 bg-white shadow rounded-2xl ">
             <dl className="space-y-2">
               <dt className="text-sm font-medium text-gray-500 ">
-                Orders
+                Cash Flow
               </dt>
 
               <dd className="text-5xl font-light md:text-6xl ">
@@ -123,7 +123,7 @@ const Dashboard = () => {
           <div className="p-6 bg-white shadow rounded-2xl ">
             <dl className="space-y-2">
               <dt className="text-sm font-medium text-gray-500 ">
-                Services
+                Employees
               </dt>
 
               <dd className="text-5xl font-light md:text-6xl ">
