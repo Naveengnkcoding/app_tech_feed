@@ -9,17 +9,17 @@ const Dashboard = () => {
       <div className="flex justify-center text-2xl text-black font-bold py-4">
         Dashboard
       </div>
-      <div className="dark:bg-gray-800 flex justify-center items-center">
+      <div className=" flex justify-center items-center">
         <section className="grid gap-6 md:grid-cols-4 p-4 md:p-8 max-w-5xl mx-auto w-full ">
-          <div className="p-6 bg-white shadow rounded-2xl dark:bg-gray-900">
+          <div className="p-6 bg-white shadow rounded-2xl ">
             <dl className="space-y-2">
-              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+              <dt className="text-sm font-medium text-gray-500 ">
                 Customers
               </dt>
               <dd className="text-5xl font-light md:text-6xl dark:text-white">
                 <Stat img="" num={2000} desc="" />
               </dd>
-              <dd className="flex items-center space-x-1 text-sm font-medium text-green-500 dark:text-green-400">
+              <dd className="flex items-center space-x-1 text-sm font-medium text-green-500 ">
                 <span>900 increase</span>
                 <svg
                   className="w-7 h-7"
@@ -45,17 +45,17 @@ const Dashboard = () => {
               </dd>
             </dl>
           </div>
-          <div className="p-6 bg-white shadow rounded-2xl dark:bg-gray-900">
+          <div className="p-6 bg-white shadow rounded-2xl ">
             <dl className="space-y-2">
-              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+              <dt className="text-sm font-medium text-gray-500 ">
                 Employees
               </dt>
 
-              <dd className="text-5xl font-light md:text-6xl dark:text-white">
+              <dd className="text-5xl font-light md:text-6xl ">
                 <Stat img="" num={30} desc="" />
               </dd>
 
-              <dd className="flex items-center space-x-1 text-sm font-medium text-red-500 dark:text-red-400">
+              <dd className="flex items-center space-x-1 text-sm font-medium text-red-500 ">
                 <span>7% Loss</span>
 
                 <svg
@@ -83,17 +83,17 @@ const Dashboard = () => {
             </dl>
           </div>
 
-          <div className="p-6 bg-white shadow rounded-2xl dark:bg-gray-900">
+          <div className="p-6 bg-white shadow rounded-2xl ">
             <dl className="space-y-2">
-              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+              <dt className="text-sm font-medium text-gray-500 ">
                 Orders
               </dt>
 
-              <dd className="text-5xl font-light md:text-6xl dark:text-white">
+              <dd className="text-5xl font-light md:text-6xl ">
                 <Stat img="" num={444} desc="" />
               </dd>
 
-              <dd className="flex items-center space-x-1 text-sm font-medium text-green-500 dark:text-green-400">
+              <dd className="flex items-center space-x-1 text-sm font-medium text-green-500 ">
                 <span>3% increase</span>
 
                 <svg
@@ -120,17 +120,17 @@ const Dashboard = () => {
               </dd>
             </dl>
           </div>
-          <div className="p-6 bg-white shadow rounded-2xl dark:bg-gray-900">
+          <div className="p-6 bg-white shadow rounded-2xl ">
             <dl className="space-y-2">
-              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+              <dt className="text-sm font-medium text-gray-500 ">
                 Services
               </dt>
 
-              <dd className="text-5xl font-light md:text-6xl dark:text-white">
+              <dd className="text-5xl font-light md:text-6xl ">
                 <Stat img="" num={1209} desc="" />
               </dd>
 
-              <dd className="flex items-center space-x-1 text-sm font-medium text-green-500 dark:text-green-400">
+              <dd className="flex items-center space-x-1 text-sm font-medium text-green-500 ">
                 <span>7% increase</span>
 
                 <svg

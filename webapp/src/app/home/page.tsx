@@ -12,8 +12,8 @@ const Home = () => {
         <div className="scroll-smooth text-black">
             <Sidebar /> 
             <div className="relative h-screen overflow-x-auto overflow-y-auto  sm:rounded-lg p-8" id="home">
-    <table className="w-full shadow-md text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs font-bold border-b text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table className="w-full shadow-md text-sm text-left rtl:text-right text-gray-500 ">
+        <thead className="text-xs font-bold border-b text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 ">
             <tr>
                 <th scope="col" className="px-6 py-3">                    
                     S.no
@@ -36,8 +36,8 @@ const Home = () => {
             </tr>
         </thead>
         <tbody>
-            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <tr className="bg-white ">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     1
                 </th>
                 <td className="px-6 py-4">
@@ -53,11 +53,11 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
             <tr className="bg-white  dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     2
                 </th>
                 <td className="px-6 py-4">
@@ -73,11 +73,11 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
             <tr className="bg-white dark:bg-gray-800">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     3
                 </th>
                 <td className="px-6 py-4">
@@ -93,11 +93,11 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
             <tr className="bg-white dark:bg-gray-800">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     4
                 </th>
                 <td className="px-6 py-4">
@@ -113,11 +113,11 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
             <tr className="bg-white dark:bg-gray-800">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     5
                 </th>
                 <td className="px-6 py-4">
@@ -133,11 +133,11 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
             <tr className="bg-white dark:bg-gray-800">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     6
                 </th>
                 <td className="px-6 py-4">
@@ -153,11 +153,11 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
             <tr className="bg-white dark:bg-gray-800">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     7
                 </th>
                 <td className="px-6 py-4">
@@ -173,11 +173,11 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
             <tr className="bg-white dark:bg-gray-800">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     8
                 </th>
                 <td className="px-6 py-4">
@@ -193,11 +193,11 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
             <tr className="bg-white dark:bg-gray-800">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     9
                 </th>
                 <td className="px-6 py-4">
@@ -213,7 +213,7 @@ const Home = () => {
                     Employee
                 </td>
                 <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" className="font-medium text-blue-600  hover:underline">Edit</a>
                 </td>
             </tr>
         </tbody>
