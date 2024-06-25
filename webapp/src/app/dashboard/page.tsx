@@ -3,18 +3,10 @@ import type { AppProps } from "next/app";
 import React from "react";
 import Stat from "../subcomponents/Stat";
 
-// import Sidebar from "../Sidebar";
-{
-  /* <Stat 
-                img=""
-                num={2000}
-                desc="Loss"
-              /> */
-}
 const Dashboard = () => {
   return (
-    <div className="h-[50vh ] text-black">
-      <div className="flex justify-center text-lg text-black font-bold py-4">
+    <div className="h-[50vh ] text-black " id="dashboard">
+      <div className="flex justify-center text-2xl text-black font-bold py-4">
         Dashboard
       </div>
       <div className="dark:bg-gray-800 flex justify-center items-center">
