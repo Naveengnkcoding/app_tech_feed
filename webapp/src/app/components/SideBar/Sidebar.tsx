@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Dropdown from "./subcomponents/Dropdown";
+import Dropdown from "../../subcomponents/Dropdown";
 import Link from "next/link";
 
 const Sidebar = () => {

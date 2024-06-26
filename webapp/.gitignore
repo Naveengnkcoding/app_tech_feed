@@ -8,3 +8,4 @@ react-loadable-manifest.json
 .next/static/webpack
 .next/cache/webpack/client-development
 .next/cache/webpack/server-development
+webapp/package-lock.json
