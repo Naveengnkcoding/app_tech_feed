@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Login from "./Login";
+import Login from "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
 
 export default function Home() {

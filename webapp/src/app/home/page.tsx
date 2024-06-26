@@ -10,6 +10,7 @@ import Settings from "../settings/page";
 const Home = () => { 
     return(
         <div>
+            <Sidebar />
             <Dashboard />
             <Customers />
             <Employees />
