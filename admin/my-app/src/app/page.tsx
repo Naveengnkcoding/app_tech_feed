@@ -1,9 +1,13 @@
 import Image from "next/image";
+import DefaultLayout from "./components/Layouts/DefaultLaout";
+import ECommerce from "./components/Dashboard/E-commerce";
 
 export default function Home() {
   return (
     <div>
-      Home
+        <DefaultLayout>
+          <ECommerce />
+        </DefaultLayout>
     </div>
   );
 }
