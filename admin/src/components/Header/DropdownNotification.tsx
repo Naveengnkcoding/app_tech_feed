@@ -3,33 +3,33 @@ import Link from "next/link";
 import ClickOutside from "@/components/ClickOutside";
 import Image from "next/image";
 
-const notificationList = [
-  {
-    image: "/images/user/user-15.png",
-    title: "Piter Joined the Team!",
-    subTitle: "Congratulate him",
-  },
-  {
-    image: "/images/user/user-02.png",
-    title: "New message received",
-    subTitle: "Devid sent you new message",
-  },
-  {
-    image: "/images/user/user-26.png",
-    title: "New Payment received",
-    subTitle: "Check your earnings",
-  },
-  {
-    image: "/images/user/user-28.png",
-    title: "Jolly completed tasks",
-    subTitle: "Assign her newtasks",
-  },
-  {
-    image: "/images/user/user-27.png",
-    title: "Roman Joined the Team!",
-    subTitle: "Congratulate him",
-  },
-];
+// const notificationList = [
+//   {
+//     image: "/images/user/user-15.png",
+//     title: "Piter Joined the Team!",
+//     subTitle: "Congratulate him",
+//   },
+//   {
+//     image: "/images/user/user-02.png",
+//     title: "New message received",
+//     subTitle: "Devid sent you new message",
+//   },
+//   {
+//     image: "/images/user/user-26.png",
+//     title: "New Payment received",
+//     subTitle: "Check your earnings",
+//   },
+//   {
+//     image: "/images/user/user-28.png",
+//     title: "Jolly completed tasks",
+//     subTitle: "Assign her newtasks",
+//   },
+//   {
+//     image: "/images/user/user-27.png",
+//     title: "Roman Joined the Team!",
+//     subTitle: "Congratulate him",
+//   },
+// ];
 
 const DropdownNotification = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -85,7 +85,7 @@ const DropdownNotification = () => {
                 5 new
               </span>
             </div>
-
+{/* 
             <ul className="no-scrollbar mb-5 flex h-auto flex-col gap-1 overflow-y-auto">
               {notificationList.map((item, index) => (
                 <li key={index}>
@@ -117,7 +117,7 @@ const DropdownNotification = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
 
             <Link
               className="flex items-center justify-center rounded-[7px] border border-primary p-2.5 font-medium text-primary hover:bg-blue-light-5 dark:border-dark-4 dark:text-dark-6 dark:hover:border-primary dark:hover:bg-blue-light-3 dark:hover:text-primary"

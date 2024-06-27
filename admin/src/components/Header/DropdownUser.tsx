@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import ClickOutside from "@/components/ClickOutside";
 
@@ -13,8 +14,8 @@ const DropdownUser = () => {
         className="flex items-center gap-4"
         href="#"
       >
-        <span className="h-12 w-12 rounded-full">
-          <Image
+        <span className="h-12 w-12 bg-black rounded-full">
+          {/* <Image
             width={112}
             height={112}
             src="/images/user/user-03.png"
@@ -24,11 +25,11 @@ const DropdownUser = () => {
             }}
             alt="User"
             className="overflow-hidden rounded-full"
-          />
+          /> */}
         </span>
 
         <span className="flex items-center gap-2 font-medium text-dark dark:text-dark-6">
-          <span className="hidden lg:block">Jhon Smith</span>
+          <span className="hidden lg:block">Name</span>
 
           <svg
             className={`fill-current duration-200 ease-in ${dropdownOpen && "rotate-180"}`}
@@ -54,8 +55,8 @@ const DropdownUser = () => {
           className={`absolute right-0 mt-7.5 flex w-[280px] flex-col rounded-lg border-[0.5px] border-stroke bg-white shadow-default dark:border-dark-3 dark:bg-gray-dark`}
         >
           <div className="flex items-center gap-2.5 px-5 pb-5.5 pt-3.5">
-            <span className="relative block h-12 w-12 rounded-full">
-              <Image
+            <span className="relative block h-12 w-12 bg-black rounded-full">
+              {/* <Image
                 width={112}
                 height={112}
                 src="/images/user/user-03.png"
@@ -65,17 +66,17 @@ const DropdownUser = () => {
                 }}
                 alt="User"
                 className="overflow-hidden rounded-full"
-              />
+              /> */}
 
               <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-green dark:border-gray-dark"></span>
             </span>
 
             <span className="block">
               <span className="block font-medium text-dark dark:text-white">
-                Jhon Smith
+                Name
               </span>
               <span className="block font-medium text-dark-5 dark:text-dark-6">
-                jonson@nextadmin.com
+                abc@gmail.com
               </span>
             </span>
           </div>

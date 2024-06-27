@@ -1,6 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Settings",
+};
 
 const SettingBoxes = () => {
   return (
@@ -52,8 +57,8 @@ const SettingBoxes = () => {
                         type="text"
                         name="fullName"
                         id="fullName"
-                        placeholder="Devid Jhon"
-                        defaultValue="Devid Jhon"
+                        placeholder="Name"
+                        defaultValue=""
                       />
                     </div>
                   </div>
@@ -89,8 +94,8 @@ const SettingBoxes = () => {
                         type="text"
                         name="phoneNumber"
                         id="phoneNumber"
-                        placeholder="+990 3343 7865"
-                        defaultValue="+990 3343 7865"
+                        placeholder="+91"
+                        defaultValue=""
                       />
                     </div>
                   </div>
@@ -126,8 +131,8 @@ const SettingBoxes = () => {
                       type="email"
                       name="emailAddress"
                       id="emailAddress"
-                      placeholder="devidjond45@gmail.com"
-                      defaultValue="devidjond45@gmail.com"
+                      placeholder="abc@gmail.com"
+                      defaultValue=""
                     />
                   </div>
                 </div>
@@ -168,8 +173,8 @@ const SettingBoxes = () => {
                       type="text"
                       name="Username"
                       id="Username"
-                      placeholder="devidjhon24"
-                      defaultValue="devidjhon24"
+                      placeholder="Username"
+                      defaultValue=""
                     />
                   </div>
                 </div>
@@ -205,9 +210,8 @@ const SettingBoxes = () => {
                       name="bio"
                       id="bio"
                       rows={6}
-                      placeholder="Write your bio here"
-                      defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia turpis tortor, consequat efficitur mi congue a. Curabitur cursus, ipsum ut lobortis sodales, enim arcu pellentesque lectus
- ac suscipit diam sem a felis. Cras sapien ex, blandit eu dui et suscipit gravida nunc. Sed sed est quis dui."
+                      placeholder="Description"
+                      defaultValue=""
                     ></textarea>
                   </div>
                 </div>
@@ -240,15 +244,15 @@ const SettingBoxes = () => {
             <div className="p-7">
               <form>
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="h-14 w-14 rounded-full">
+                  <div className="h-14 w-14 bg-black rounded-full">
                     <>
-                      <Image
-                        src="/images/user/user-03.png"
+                      {/* <Image
+                        src=""
                         width={55}
                         height={55}
                         alt="User"
                         className="overflow-hidden rounded-full"
-                      />
+                      /> */}
                     </>
                   </div>
                   <div>
