@@ -13,6 +13,7 @@ export default function Applications({
     const [sidebarOpen, setSidebarOpen] = useState(false);
     return (
       <>
+      <title>Applications</title>
         {/* <!-- ===== Page Wrapper Star ===== --> */}
         <div className="flex h-screen overflow-hidden">
           {/* <!-- ===== Sidebar Star ===== --> */}
@@ -29,6 +30,7 @@ export default function Applications({
             <main>
               <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
                 {children}
+                Applications
               </div>
             </main>
             {/* <!-- ===== Main Content End ===== --> */}

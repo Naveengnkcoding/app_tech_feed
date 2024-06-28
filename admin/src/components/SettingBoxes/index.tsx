@@ -3,9 +3,9 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Settings",
-};
+// export const metadata: Metadata = {
+//   title: "Settings",
+// };
 
 const SettingBoxes = () => {
   return (

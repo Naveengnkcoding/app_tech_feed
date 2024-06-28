@@ -70,7 +70,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Customers",
-        route: "/tables",
+        route: "/customers",
       },
       {
         icon: (
@@ -91,7 +91,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Employees",
-        route: "/tables",
+        route: "/employees",
       },
       { 
         icon: (
