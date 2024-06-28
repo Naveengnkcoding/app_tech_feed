@@ -9,11 +9,7 @@ import DefaultLayout from "@/components/Layouts/DefaultLaout";
 //   title: "Customers",
 // };
 
-export default function Customers({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Customers() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
@@ -33,7 +29,6 @@ export default function Customers({
           {/* <!-- ===== Main Content Star ===== --> */}
           <main>
             <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-              {children}
               Customers
             </div>
           </main>
