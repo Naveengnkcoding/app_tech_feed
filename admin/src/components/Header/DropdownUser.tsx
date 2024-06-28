@@ -167,7 +167,7 @@ const DropdownUser = () => {
                   </clipPath>
                 </defs>
               </svg>
-              Logout
+              <Link href="/auth/signin">Logout</Link>
             </button>
           </div>
         </div>

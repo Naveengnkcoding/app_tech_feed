@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import type { AppProps } from "next/app";
+import { usePathname } from "next/navigation";
 import React from "react";
 import Link from "next/link";
 
@@ -59,7 +61,7 @@ const Login = () => {
                           </div> */}
                   </div>
                 </div>
-                <Link href="/home" className="text-white no-underline">
+                <Link href="/dashboard" className="text-white no-underline">
                   <button
                     type="submit"
                     className="w-full text-white bg-primary-600 bg-[#0056b9] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-md px-5 py-2.5 text-center "

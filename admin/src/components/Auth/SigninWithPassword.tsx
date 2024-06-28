@@ -11,16 +11,16 @@ export default function SigninWithPassword() {
     <form>
       <div className="mb-4">
         <label
-          htmlFor="email"
+          htmlFor="Username"
           className="mb-2.5 block font-medium text-dark dark:text-white"
         >
-          Email
+          Username
         </label>
         <div className="relative">
           <input
-            type="email"
-            placeholder="Enter your email"
-            name="email"
+            type="Username"
+            placeholder="Username"
+            name="Username"
             className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary"
           />
 
@@ -87,7 +87,7 @@ export default function SigninWithPassword() {
       </div>
 
       <div className="mb-6 flex items-center justify-between gap-2 py-2">
-        <label
+        {/* <label
           htmlFor="remember"
           className="flex cursor-pointer select-none items-center font-satoshi text-base font-medium text-dark dark:text-white"
         >
@@ -118,14 +118,14 @@ export default function SigninWithPassword() {
             </svg>
           </span>
           Remember me
-        </label>
+        </label> */}
 
-        <Link
+        {/* <Link
           href="/auth/forgot-password"
-          className="select-none font-satoshi text-base font-medium text-dark underline duration-300 hover:text-primary dark:text-white dark:hover:text-primary"
+          className="select-none text-right font-satoshi text-base font-medium text-dark underline duration-300 hover:text-primary dark:text-white dark:hover:text-primary"
         >
           Forgot Password?
-        </Link>
+        </Link> */}
       </div>
 
       <div className="mb-4.5">
