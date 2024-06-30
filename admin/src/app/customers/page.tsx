@@ -2,6 +2,7 @@
 import React, { useState, ReactNode } from "react";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
+import Tablecust from "@/components/Tables/Customerstable";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
 
@@ -29,7 +30,7 @@ export default function Customers() {
           {/* <!-- ===== Main Content Star ===== --> */}
           <main>
             <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-              Customers
+              <Tablecust />
             </div>
           </main>
           {/* <!-- ===== Main Content End ===== --> */}
