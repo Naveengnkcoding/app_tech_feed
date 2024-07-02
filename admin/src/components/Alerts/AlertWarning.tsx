@@ -26,7 +26,7 @@ const AlertWarning = () => {
           </h5>
           <p className="w-full max-w-[740px] text-[#D0915C]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
+            industry. Lorem Ipsum has been the industries standard dummy
             text ever since the 1500s, when
           </p>
         </div>
