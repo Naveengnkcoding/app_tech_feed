@@ -3,19 +3,19 @@ import next from "next";
 const Employeetable = () => {
   return (
     <div>
-      <section className="bg-gray-50 p-3 antialiased dark:bg-gray-900 sm:p-5">
+      <section className="bg-gray-50 dark:bg-white sm:p-5">
         <div className="mx-auto max-w-screen-2xl px-4 lg:px-12">
-          <div className="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+          <div className="overflow-hidden bg-white dark:bg-gray-800 sm:rounded-lg">
             <div className="flex flex-col space-y-3 p-4 md:flex-row md:items-center md:justify-between md:space-x-4 md:space-y-0">
               <div className="flex flex-1 items-center space-x-2">
-                <h5>
+                {/* <h5>
                   <span className="text-gray-500">All Products:</span>
                   <span className="dark:text-white">123456</span>
-                </h5>
-                <h5 className="ml-1 text-gray-500 dark:text-gray-400">
+                </h5> */}
+                {/* <h5 className="ml-1 text-gray-500 dark:text-gray-400">
                   1-100 (436)
-                </h5>
-                <button
+                </h5> */}
+                {/* <button
                   type="button"
                   className="group"
                   data-tooltip-target="results-tooltip"
@@ -33,17 +33,17 @@ const Employeetable = () => {
                     />
                   </svg>
                   <span className="sr-only">More info</span>
-                </button>
-                <div
+                </button> */}
+                {/* <div
                   id="results-tooltip"
                   role="tooltip"
                   className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
                 >
                   Showing 1-100 of 436 results
                   <div className="tooltip-arrow" data-popper-arrow=""></div>
-                </div>
+                </div> */}
               </div>
-              <div className="flex flex-shrink-0 flex-col items-start space-y-3 md:flex-row md:items-center md:space-x-3 md:space-y-0 lg:justify-end">
+              {/* <div className="flex flex-shrink-0 flex-col items-start space-y-3 md:flex-row md:items-center md:space-x-3 md:space-y-0 lg:justify-end">
                 <button
                   type="button"
                   className="hover:text-primary-700 inline-flex flex-shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
@@ -62,11 +62,11 @@ const Employeetable = () => {
                   </svg>
                   Table settings
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="mx-4 flex flex-col items-stretch justify-between space-y-3 border-t py-4 dark:border-gray-700 md:flex-row md:items-center md:space-x-3 md:space-y-0">
               <div className="w-full md:w-1/2">
-                <form className="flex items-center">
+                {/* <form className="flex items-center">
                   <label className="sr-only">Search</label>
                   <div className="relative w-full">
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
@@ -91,9 +91,9 @@ const Employeetable = () => {
                       className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                     />
                   </div>
-                </form>
+                </form> */}
               </div>
-              <div className="flex w-full flex-shrink-0 flex-col items-stretch justify-end space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
+              {/* <div className="flex w-full flex-shrink-0 flex-col items-stretch justify-end space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
                 <button
                   type="button"
                   id="createProductButton"
@@ -864,7 +864,7 @@ const Employeetable = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400">
@@ -872,40 +872,23 @@ const Employeetable = () => {
                   <tr>
                     <th scope="col" className="p-4">
                       <div className="flex items-center">
-                        <input
-                          id="checkbox-all"
-                          type="checkbox"
-                          className="text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 h-4 w-4 rounded border-gray-300 bg-gray-100 focus:ring-2 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800"
-                        />
-                        <label className="sr-only">checkbox</label>
+                        S.NO
                       </div>
                     </th>
                     <th scope="col" className="p-4">
-                      Product
+                      Employee's Name
                     </th>
                     <th scope="col" className="p-4">
-                      Category
+                      Designation
                     </th>
                     <th scope="col" className="p-4">
-                      Stock
+                      Phone number
                     </th>
                     <th scope="col" className="p-4">
-                      Sales/Day
+                      Blood group
                     </th>
                     <th scope="col" className="p-4">
-                      Sales/Month
-                    </th>
-                    <th scope="col" className="p-4">
-                      Rating
-                    </th>
-                    <th scope="col" className="p-4">
-                      Sales
-                    </th>
-                    <th scope="col" className="p-4">
-                      Revenue
-                    </th>
-                    <th scope="col" className="p-4">
-                      Last Update
+                      Action
                     </th>
                   </tr>
                 </thead>
@@ -913,12 +896,7 @@ const Employeetable = () => {
                   <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
                     <td className="w-4 p-4">
                       <div className="flex items-center">
-                        <input
-                          id="checkbox-table-search-1"
-                          type="checkbox"
-                          className="text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 h-4 w-4 rounded border-gray-300 bg-gray-100 focus:ring-2 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800"
-                        />
-                        <label className="sr-only">checkbox</label>
+                        1
                       </div>
                     </td>
                     <th
@@ -1019,7 +997,7 @@ const Employeetable = () => {
                           data-drawer-target="drawer-update-product"
                           data-drawer-show="drawer-update-product"
                           aria-controls="drawer-update-product"
-                          className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -1189,7 +1167,7 @@ const Employeetable = () => {
                           data-drawer-target="drawer-update-product"
                           data-drawer-show="drawer-update-product"
                           aria-controls="drawer-update-product"
-                          className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -1359,7 +1337,7 @@ const Employeetable = () => {
                           data-drawer-target="drawer-update-product"
                           data-drawer-show="drawer-update-product"
                           aria-controls="drawer-update-product"
-                          className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -1529,7 +1507,7 @@ const Employeetable = () => {
                           data-drawer-target="drawer-update-product"
                           data-drawer-show="drawer-update-product"
                           aria-controls="drawer-update-product"
-                          className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -1699,7 +1677,7 @@ const Employeetable = () => {
                           data-drawer-target="drawer-update-product"
                           data-drawer-show="drawer-update-product"
                           aria-controls="drawer-update-product"
-                          className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -1869,7 +1847,7 @@ const Employeetable = () => {
                           data-drawer-target="drawer-update-product"
                           data-drawer-show="drawer-update-product"
                           aria-controls="drawer-update-product"
-                          className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -2039,7 +2017,7 @@ const Employeetable = () => {
                           data-drawer-target="drawer-update-product"
                           data-drawer-show="drawer-update-product"
                           aria-controls="drawer-update-product"
-                          className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -3261,3 +3239,5 @@ const Employeetable = () => {
     </div>
   );
 };
+
+export default Employeetable;

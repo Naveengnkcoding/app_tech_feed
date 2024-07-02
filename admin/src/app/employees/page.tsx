@@ -4,6 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import Employeetable from "@/components/Tables/Employeetable";
 
 export default function Employees() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function Employees() {
           {/* <!-- ===== Main Content Star ===== --> */}
           <main>
             <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-              Employees
+              <Employeetable />
             </div>
           </main>
           {/* <!-- ===== Main Content End ===== --> */}
