@@ -4,6 +4,7 @@ import next from "next";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import View from "@/components/Popup/View";
 
 export default function Applications() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function Applications() {
             {/* <!-- ===== Main Content Star ===== --> */}
             <main>
               <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-                Applications
+                <View />
               </div>
             </main>
             {/* <!-- ===== Main Content End ===== --> */}
