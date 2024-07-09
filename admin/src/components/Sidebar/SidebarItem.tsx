@@ -20,18 +20,18 @@ const SidebarItem = ({ item, pageName, setPageName }: any) => {
           {item.icon}
           {item.label}
           {item.message && (
-            <span className="absolute right-11.5 top-1/2 -translate-y-1/2 rounded-full bg-red-light-6 px-1.5 py-px text-[10px] font-medium leading-[17px] text-red">
+            <span className="absolute inline-flex right-11.5 top-1/2 -translate-y-1/2 rounded-full bg-red-light-6 px-1.5 py-px text-[10px] font-medium leading-[17px] text-red">
               {item.message}
             </span>
           )}
           {item.pro && (
-            <span className="absolute right-3.5 top-1/2 -translate-y-1/2 rounded-md bg-primary px-1.5 py-px text-[10px] font-medium leading-[17px] text-white">
+            <span className="absolute inline-flex right-3.5 top-1/2 -translate-y-1/2 rounded-md bg-primary px-1.5 py-px text-[10px] font-medium leading-[17px] text-white">
               Pro
             </span>
           )}
           {item.children && (
             <svg
-              className={`absolute right-3.5 top-1/2 -translate-y-1/2 fill-current ${
+              className={`absolute inline-flex right-3.5 top-1/2 -translate-y-1/2 fill-current ${
                 pageName !== item.label.toLowerCase() && "rotate-180"
               }`}
               width="22"

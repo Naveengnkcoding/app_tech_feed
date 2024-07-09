@@ -1,8 +1,8 @@
 const CalendarBox = () => {
   return (
     <>
-      <div className="w-full max-w-full rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
-        <table className="w-full">
+      <div className="w-full -z-1000 max-w-full rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
+        <table className="w-full -z-1000">
           <thead>
             <tr className="grid grid-cols-7 rounded-t-[10px] bg-primary text-white">
               <th className="flex h-15 items-center justify-center rounded-tl-[10px] p-1 text-body-xs font-medium sm:text-base xl:p-5">
@@ -35,10 +35,10 @@ const CalendarBox = () => {
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className=" -z-1000">
             {/* <!-- Line 1 --> */}
             <tr className="grid grid-cols-7">
-              <td className="ease relative h-20 cursor-pointer border border-stroke p-2 transition duration-500 hover:bg-gray-2 dark:border-dark-3 dark:hover:bg-dark-2 md:h-25 md:p-6 xl:h-31">
+              <td className="ease h-20 cursor-pointer border border-stroke p-2 transition duration-500 hover:bg-gray-2 dark:border-dark-3 dark:hover:bg-dark-2 md:h-25 md:p-6 xl:h-31">
                 <span className="font-medium text-dark dark:text-white">1</span>
                 <div className="group h-16 w-full flex-grow cursor-pointer py-1 md:h-30">
                   <span className="group-hover:text-primary md:hidden">
