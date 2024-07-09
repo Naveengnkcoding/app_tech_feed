@@ -3,19 +3,18 @@ import next from "next";
 const Employeetable = () => {
   return (
     <div>
-      <section className="bg-gray-50 dark:bg-white sm:p-5">
-        <div className="mx-auto max-w-screen-2xl px-4 lg:px-12">
-          <div className="overflow-hidden bg-white dark:bg-gray-800 sm:rounded-lg">
-            <div className="flex flex-col space-y-3 p-4 md:flex-row md:items-center md:justify-between md:space-x-4 md:space-y-0">
-              <div className="flex flex-1 items-center space-x-2">
-                {/* <h5>
+      <div className="w-full max-w-screen-2xl lg:px-4">
+        <div className="overflow-hidden bg-white shadow-lg dark:bg-gray-800 sm:rounded-lg">
+          <div className="flex flex-col space-y-3 p-4 md:flex-row md:items-center md:justify-between md:space-x-4 md:space-y-0">
+            <div className="flex flex-1 items-center space-x-2">
+              {/* <h5>
                   <span className="text-gray-500">All Products:</span>
                   <span className="dark:text-white">123456</span>
                 </h5> */}
-                {/* <h5 className="ml-1 text-gray-500 dark:text-gray-400">
+              {/* <h5 className="ml-1 text-gray-500 dark:text-gray-400">
                   1-100 (436)
                 </h5> */}
-                {/* <button
+              {/* <button
                   type="button"
                   className="group"
                   data-tooltip-target="results-tooltip"
@@ -34,7 +33,7 @@ const Employeetable = () => {
                   </svg>
                   <span className="sr-only">More info</span>
                 </button> */}
-                {/* <div
+              {/* <div
                   id="results-tooltip"
                   role="tooltip"
                   className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
@@ -42,8 +41,8 @@ const Employeetable = () => {
                   Showing 1-100 of 436 results
                   <div className="tooltip-arrow" data-popper-arrow=""></div>
                 </div> */}
-              </div>
-              {/* <div className="flex flex-shrink-0 flex-col items-start space-y-3 md:flex-row md:items-center md:space-x-3 md:space-y-0 lg:justify-end">
+            </div>
+            {/* <div className="flex flex-shrink-0 flex-col items-start space-y-3 md:flex-row md:items-center md:space-x-3 md:space-y-0 lg:justify-end">
                 <button
                   type="button"
                   className="hover:text-primary-700 inline-flex flex-shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
@@ -63,10 +62,10 @@ const Employeetable = () => {
                   Table settings
                 </button>
               </div> */}
-            </div>
-            <div className="mx-4 flex flex-col items-stretch justify-between space-y-3 border-t py-4 dark:border-gray-700 md:flex-row md:items-center md:space-x-3 md:space-y-0">
-              <div className="w-full md:w-1/2">
-                {/* <form className="flex items-center">
+          </div>
+          <div className="mx-4 flex flex-col items-stretch justify-between space-y-3 border-t py-4 dark:border-gray-700 md:flex-row md:items-center md:space-x-3 md:space-y-0">
+            <div className="w-full md:w-1/2">
+              {/* <form className="flex items-center">
                   <label className="sr-only">Search</label>
                   <div className="relative w-full">
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
@@ -92,8 +91,8 @@ const Employeetable = () => {
                     />
                   </div>
                 </form> */}
-              </div>
-              {/* <div className="flex w-full flex-shrink-0 flex-col items-stretch justify-end space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
+            </div>
+            {/* <div className="flex w-full flex-shrink-0 flex-col items-stretch justify-end space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
                 <button
                   type="button"
                   id="createProductButton"
@@ -865,846 +864,667 @@ const Employeetable = () => {
                   </div>
                 </div>
               </div> */}
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400">
-                <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
-                  <tr>
-                    <th scope="col" className="p-4">
-                      <div className="flex items-center">
-                        S.NO
-                      </div>
-                    </th>
-                    <th scope="col" className="p-4">
-                      Employee Name
-                    </th>
-                    <th scope="col" className="p-4">
-                      Designation
-                    </th>
-                    <th scope="col" className="p-4">
-                      Phone number
-                    </th>
-                    <th scope="col" className="p-4">
-                      Blood group
-                    </th>
-                    <th scope="col" className="p-4">
-                      Action
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                    <td className="w-4 p-4">
-                      <div className="flex items-center">
-                        1
-                      </div>
-                    </td>
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
-                    >
-                      <div className="mr-3 flex items-center">
-                        {/* <img
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400">
+              <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                  <th scope="col" className="p-4">
+                    <div className="flex items-center">S.NO</div>
+                  </th>
+                  <th scope="col" className="p-4">
+                    Employee Name
+                  </th>
+                  <th scope="col" className="p-4">
+                    Designation
+                  </th>
+                  <th scope="col" className="p-4">
+                    Phone number
+                  </th>
+                  <th scope="col" className="p-4">
+                    Blood group
+                  </th>
+                  <th scope="col" className="p-4">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">1</div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+                  >
+                    <div className="mr-3 flex items-center">
+                      {/* <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
                         /> */}
-                        Employee_name
-                      </div>
-                    </th>
-                    <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
-                        IoT specialist
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center">
-                        <div className=""></div>
-                        +91 xxxxx xxxxx
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      A Positive
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center space-x-4">
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-update-product"
-                          data-drawer-show="drawer-update-product"
-                          aria-controls="drawer-update-product"
-                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      Employee_name
+                    </div>
+                  </th>
+                  <td className="px-4 py-3">
+                    <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
+                      IoT specialist
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center">
+                      <div className=""></div>
+                      +91 xxxxx xxxxx
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    A Positive
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        data-drawer-target="drawer-update-product"
+                        data-drawer-show="drawer-update-product"
+                        aria-controls="drawer-update-product"
+                        className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-read-product-advanced"
-                          data-drawer-show="drawer-read-product-advanced"
-                          aria-controls="drawer-read-product-advanced"
-                          className="hover:text-primary-700 flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                          <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+                      <button
+                        type="button"
+                        data-modal-target="delete-modal"
+                        data-modal-toggle="delete-modal"
+                        className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                          >
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
-                            />
-                          </svg>
-                          Preview
-                        </button>
-                        <button
-                          type="button"
-                          data-modal-target="delete-modal"
-                          data-modal-toggle="delete-modal"
-                          className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                    <td className="w-4 p-4">
-                      <div className="flex items-center">
-                        2
-                      </div>
-                    </td>
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
-                    >
-                      <div className="mr-3 flex items-center">
-                        {/* <img
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">2</div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+                  >
+                    <div className="mr-3 flex items-center">
+                      {/* <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
                         /> */}
-                        Employee_name
-                      </div>
-                    </th>
-                    <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
-                        IoT specialist
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center">
-                        <div className=""></div>
-                        +91 xxxxx xxxxx
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      A Positive
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center space-x-4">
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-update-product"
-                          data-drawer-show="drawer-update-product"
-                          aria-controls="drawer-update-product"
-                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      Employee_name
+                    </div>
+                  </th>
+                  <td className="px-4 py-3">
+                    <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
+                      IoT specialist
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center">
+                      <div className=""></div>
+                      +91 xxxxx xxxxx
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    A Positive
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        data-drawer-target="drawer-update-product"
+                        data-drawer-show="drawer-update-product"
+                        aria-controls="drawer-update-product"
+                        className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-read-product-advanced"
-                          data-drawer-show="drawer-read-product-advanced"
-                          aria-controls="drawer-read-product-advanced"
-                          className="hover:text-primary-700 flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                          <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-modal-target="delete-modal"
+                        data-modal-toggle="delete-modal"
+                        className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                          >
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
-                            />
-                          </svg>
-                          Preview
-                        </button>
-                        <button
-                          type="button"
-                          data-modal-target="delete-modal"
-                          data-modal-toggle="delete-modal"
-                          className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                    <td className="w-4 p-4">
-                      <div className="flex items-center">
-                        3
-                      </div>
-                    </td>
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
-                    >
-                      <div className="mr-3 flex items-center">
-                        {/* <img
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">3</div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+                  >
+                    <div className="mr-3 flex items-center">
+                      {/* <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
                         /> */}
-                        Employee_name
-                      </div>
-                    </th>
-                    <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
-                        IoT specialist
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center">
-                        <div className=""></div>
-                        +91 xxxxx xxxxx
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      A Positive
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center space-x-4">
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-update-product"
-                          data-drawer-show="drawer-update-product"
-                          aria-controls="drawer-update-product"
-                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      Employee_name
+                    </div>
+                  </th>
+                  <td className="px-4 py-3">
+                    <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
+                      IoT specialist
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center">
+                      <div className=""></div>
+                      +91 xxxxx xxxxx
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    A Positive
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        data-drawer-target="drawer-update-product"
+                        data-drawer-show="drawer-update-product"
+                        aria-controls="drawer-update-product"
+                        className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-read-product-advanced"
-                          data-drawer-show="drawer-read-product-advanced"
-                          aria-controls="drawer-read-product-advanced"
-                          className="hover:text-primary-700 flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                          <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-modal-target="delete-modal"
+                        data-modal-toggle="delete-modal"
+                        className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                          >
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
-                            />
-                          </svg>
-                          Preview
-                        </button>
-                        <button
-                          type="button"
-                          data-modal-target="delete-modal"
-                          data-modal-toggle="delete-modal"
-                          className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                    <td className="w-4 p-4">
-                      <div className="flex items-center">
-                        4
-                      </div>
-                    </td>
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
-                    >
-                      <div className="mr-3 flex items-center">
-                        {/* <img
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">4</div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+                  >
+                    <div className="mr-3 flex items-center">
+                      {/* <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
                         /> */}
-                        Employee_name
-                      </div>
-                    </th>
-                    <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
-                        IoT specialist
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center">
-                        <div className=""></div>
-                        +91 xxxxx xxxxx
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      A Positive
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center space-x-4">
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-update-product"
-                          data-drawer-show="drawer-update-product"
-                          aria-controls="drawer-update-product"
-                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      Employee_name
+                    </div>
+                  </th>
+                  <td className="px-4 py-3">
+                    <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
+                      IoT specialist
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center">
+                      <div className=""></div>
+                      +91 xxxxx xxxxx
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    A Positive
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        data-drawer-target="drawer-update-product"
+                        data-drawer-show="drawer-update-product"
+                        aria-controls="drawer-update-product"
+                        className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-read-product-advanced"
-                          data-drawer-show="drawer-read-product-advanced"
-                          aria-controls="drawer-read-product-advanced"
-                          className="hover:text-primary-700 flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                          <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-modal-target="delete-modal"
+                        data-modal-toggle="delete-modal"
+                        className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                          >
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
-                            />
-                          </svg>
-                          Preview
-                        </button>
-                        <button
-                          type="button"
-                          data-modal-target="delete-modal"
-                          data-modal-toggle="delete-modal"
-                          className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                    <td className="w-4 p-4">
-                      <div className="flex items-center">
-                        5
-                      </div>
-                    </td>
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
-                    >
-                      <div className="mr-3 flex items-center">
-                        {/* <img
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">5</div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+                  >
+                    <div className="mr-3 flex items-center">
+                      {/* <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
                         /> */}
-                        Employee_name
-                      </div>
-                    </th>
-                    <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
-                        IoT specialist
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center">
-                        <div className=""></div>
-                        +91 xxxxx xxxxx
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      A Positive
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center space-x-4">
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-update-product"
-                          data-drawer-show="drawer-update-product"
-                          aria-controls="drawer-update-product"
-                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      Employee_name
+                    </div>
+                  </th>
+                  <td className="px-4 py-3">
+                    <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
+                      IoT specialist
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center">
+                      <div className=""></div>
+                      +91 xxxxx xxxxx
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    A Positive
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        data-drawer-target="drawer-update-product"
+                        data-drawer-show="drawer-update-product"
+                        aria-controls="drawer-update-product"
+                        className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-read-product-advanced"
-                          data-drawer-show="drawer-read-product-advanced"
-                          aria-controls="drawer-read-product-advanced"
-                          className="hover:text-primary-700 flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                          <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-modal-target="delete-modal"
+                        data-modal-toggle="delete-modal"
+                        className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                          >
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
-                            />
-                          </svg>
-                          Preview
-                        </button>
-                        <button
-                          type="button"
-                          data-modal-target="delete-modal"
-                          data-modal-toggle="delete-modal"
-                          className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                    <td className="w-4 p-4">
-                      <div className="flex items-center">
-                        6
-                      </div>
-                    </td>
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
-                    >
-                      <div className="mr-3 flex items-center">
-                        {/* <img
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">6</div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+                  >
+                    <div className="mr-3 flex items-center">
+                      {/* <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
                         /> */}
-                        Employee_name
-                      </div>
-                    </th>
-                    <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
-                        IoT specialist
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center">
-                        <div className=""></div>
-                        +91 xxxxx xxxxx
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      A Positive
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center space-x-4">
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-update-product"
-                          data-drawer-show="drawer-update-product"
-                          aria-controls="drawer-update-product"
-                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      Employee_name
+                    </div>
+                  </th>
+                  <td className="px-4 py-3">
+                    <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
+                      IoT specialist
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center">
+                      <div className=""></div>
+                      +91 xxxxx xxxxx
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    A Positive
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        data-drawer-target="drawer-update-product"
+                        data-drawer-show="drawer-update-product"
+                        aria-controls="drawer-update-product"
+                        className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-read-product-advanced"
-                          data-drawer-show="drawer-read-product-advanced"
-                          aria-controls="drawer-read-product-advanced"
-                          className="hover:text-primary-700 flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                          <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-modal-target="delete-modal"
+                        data-modal-toggle="delete-modal"
+                        className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                          >
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
-                            />
-                          </svg>
-                          Preview
-                        </button>
-                        <button
-                          type="button"
-                          data-modal-target="delete-modal"
-                          data-modal-toggle="delete-modal"
-                          className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                    <td className="w-4 p-4">
-                      <div className="flex items-center">
-                        7
-                      </div>
-                    </td>
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
-                    >
-                      <div className="mr-3 flex items-center">
-                        {/* <img
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">7</div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+                  >
+                    <div className="mr-3 flex items-center">
+                      {/* <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
                         /> */}
-                        Employee_name
-                      </div>
-                    </th>
-                    <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
-                        IoT specialist
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center">
-                        <div className=""></div>
-                        +91 xxxxx xxxxx
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      A Positive
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center space-x-4">
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-update-product"
-                          data-drawer-show="drawer-update-product"
-                          aria-controls="drawer-update-product"
-                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      Employee_name
+                    </div>
+                  </th>
+                  <td className="px-4 py-3">
+                    <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
+                      IoT specialist
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center">
+                      <div className=""></div>
+                      +91 xxxxx xxxxx
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    A Positive
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        data-drawer-target="drawer-update-product"
+                        data-drawer-show="drawer-update-product"
+                        aria-controls="drawer-update-product"
+                        className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-read-product-advanced"
-                          data-drawer-show="drawer-read-product-advanced"
-                          aria-controls="drawer-read-product-advanced"
-                          className="hover:text-primary-700 flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                          <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-modal-target="delete-modal"
+                        data-modal-toggle="delete-modal"
+                        className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                          >
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
-                            />
-                          </svg>
-                          Preview
-                        </button>
-                        <button
-                          type="button"
-                          data-modal-target="delete-modal"
-                          data-modal-toggle="delete-modal"
-                          className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                    <td className="w-4 p-4">
-                      <div className="flex items-center">
-                        8
-                      </div>
-                    </td>
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
-                    >
-                      <div className="mr-3 flex items-center">
-                        {/* <img
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">8</div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+                  >
+                    <div className="mr-3 flex items-center">
+                      {/* <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
                         /> */}
-                        Employee_name
-                      </div>
-                    </th>
-                    <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
-                        IoT specialist
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center">
-                        <div className=""></div>
-                        +91 xxxxx xxxxx
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      A Positive
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
-                      <div className="flex items-center space-x-4">
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-update-product"
-                          data-drawer-show="drawer-update-product"
-                          aria-controls="drawer-update-product"
-                          className="bg-green-600 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      Employee_name
+                    </div>
+                  </th>
+                  <td className="px-4 py-3">
+                    <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
+                      IoT specialist
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center">
+                      <div className=""></div>
+                      +91 xxxxx xxxxx
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    A Positive
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        data-drawer-target="drawer-update-product"
+                        data-drawer-show="drawer-update-product"
+                        aria-controls="drawer-update-product"
+                        className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          data-drawer-target="drawer-read-product-advanced"
-                          data-drawer-show="drawer-read-product-advanced"
-                          aria-controls="drawer-read-product-advanced"
-                          className="hover:text-primary-700 flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                          <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-modal-target="delete-modal"
+                        data-modal-toggle="delete-modal"
+                        className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="-ml-0.5 mr-2 h-4 w-4"
+                          fill="currentColor"
+                          aria-hidden="true"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                          >
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
-                            />
-                          </svg>
-                          Preview
-                        </button>
-                        <button
-                          type="button"
-                          data-modal-target="delete-modal"
-                          data-modal-toggle="delete-modal"
-                          className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="-ml-0.5 mr-2 h-4 w-4"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            {/* <nav
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {/* <nav
               className="flex flex-col items-start justify-between space-y-3 p-4 md:flex-row md:items-center md:space-y-0"
               aria-label="Table navigation"
             >
@@ -1802,9 +1622,8 @@ const Employeetable = () => {
                 </li>
               </ul>
             </nav> */}
-          </div>
         </div>
-      </section>
+      </div>
       <div
         id="createProductModal"
         aria-hidden="true"
