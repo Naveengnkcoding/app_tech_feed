@@ -21,11 +21,11 @@ const Applicationtable = () => {
   };
 
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div className="relative -z-999 overflow-x-auto shadow-md sm:rounded-lg">
       <div className="flex-column flex flex-wrap items-center justify-left gap-2 space-y-4 pb-4 sm:flex-row sm:space-y-0">
       <label className="sr-only">Search</label>
         <div className="relative">
-          <div className="rtl:inset-r-0 pointer-events-none absolute inset-y-0 left-0 flex items-center ps-3 rtl:right-0">
+          <div className="rtl:inset-r-0 pointer-events-none absolute left-0 inset-y-0 flex items-center ps-3 rtl:right-0">
             <svg
               className="h-5 w-5 text-gray-500 dark:text-gray-400"
               aria-hidden="true"

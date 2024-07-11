@@ -1,4 +1,5 @@
 import next from "next";
+import Customerrow from "./Customerrow";
 
 const Tablecust = () => {
   return (
@@ -61,12 +62,6 @@ const Tablecust = () => {
         <table className=" w-full text-left text-sm text-gray-500 dark:text-gray-400 rtl:text-right">
           <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              {/* <th scope="col" className="p-4">
-                    <div className="flex items-center">
-                        <input id="checkbox-all-search" type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                        <label className="sr-only">checkbox</label>
-                    </div>
-                </th> */}
               <th scope="col" className="px-6 py-3">
                 Company
               </th>
@@ -82,29 +77,9 @@ const Tablecust = () => {
               <th scope="col" className="px-6 py-3">
                 Phone number
               </th>
-              {/* <th scope="col" className="px-6 py-3">
-                    Action
-                </th> */}
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
-              <th
-                scope="row"
-                className="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
-              >
-                Apple
-              </th>
-              <td className="px-6 py-4">Jeff Bezos</td>
-              <td className="px-6 py-4">Newyork,USA</td>
-              <td className="px-6 py-4">GST</td>
-              <td className="px-6 py-4">
-                <a className="text-gray-900">Phone number</a>
-              </td>
-              {/* <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td> */}
-            </tr>
           </tbody>
         </table>
       </div>
