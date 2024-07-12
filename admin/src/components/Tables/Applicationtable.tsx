@@ -1,7 +1,8 @@
 "use client";
 import next from "next";
 import { useState } from "react";
-import View from "@/components/Popup/View";
+import Applicationrow from "./Applicationrow";
+// import View from "@/components/Popup/View";
 
 const Applicationtable = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +21,25 @@ const Applicationtable = () => {
     setDownopen(!downOpen);
   };
 
+  const data = [
+    {
+      sno: 1,
+      engname: "Engineer",
+      appno: 1201,
+      comp: "Company",
+      custname: "Customer",
+      drtype: "Driver",
+      srtype: "Service",
+      status: "completed",
+    },
+  ];
+
   return (
-    <div className="relative -z-999 overflow-x-auto shadow-md sm:rounded-lg">
-      <div className="flex-column flex flex-wrap items-center justify-left gap-2 space-y-4 pb-4 sm:flex-row sm:space-y-0">
-      <label className="sr-only">Search</label>
+    <div className="relative top-20 overflow-x-auto shadow-md sm:rounded-lg">
+      <div className="flex-column justify-left flex flex-wrap items-center gap-2 space-y-4 pb-4 sm:flex-row sm:space-y-0">
+        <label className="sr-only">Search</label>
         <div className="relative">
-          <div className="rtl:inset-r-0 pointer-events-none absolute left-0 inset-y-0 flex items-center ps-3 rtl:right-0">
+          <div className="rtl:inset-r-0 pointer-events-none absolute inset-y-0 left-0 flex items-center ps-3 rtl:right-0">
             <svg
               className="h-5 w-5 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
@@ -47,11 +61,11 @@ const Applicationtable = () => {
             placeholder="Search for items"
           />
         </div>
-        <div className="flex relative text-center">
+        <div className="relative flex text-center">
           <div>
             <button
               type="button"
-              className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none"
+              className="inline-flex w-full justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none dark:bg-gray-700 dark:text-white dark:focus:outline-none"
               id="menu-button"
               aria-expanded="true"
               aria-haspopup="true"
@@ -78,7 +92,7 @@ const Applicationtable = () => {
           <div>
             <button
               type="button"
-              className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none"
+              className="inline-flex w-full justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none dark:bg-gray-700 dark:text-white dark:focus:outline-none"
               id="menu-button"
               aria-expanded="true"
               aria-haspopup="true"
@@ -102,7 +116,7 @@ const Applicationtable = () => {
           </div>
           {Open && (
             <div
-              className="absolute mt-2 flex w-50 flex-col items-center justify-center rounded-md bg-white text-center shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              className="absolute mt-2 flex w-50 flex-col items-center justify-center rounded-md bg-white text-center shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-700"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="menu-button"
@@ -110,21 +124,21 @@ const Applicationtable = () => {
               <div className="py-1" role="none">
                 <a
                   href="#"
-                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100"
+                  className="text-balck block px-9 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   New installation
                 </a>
                 <a
                   href="#"
-                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100"
+                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   New service
                 </a>
                 <a
                   href="#"
-                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100"
+                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   New check
@@ -137,7 +151,7 @@ const Applicationtable = () => {
           <div>
             <button
               type="button"
-              className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none"
+              className="inline-flex w-full justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none dark:bg-gray-700 dark:text-white dark:focus:outline-none"
               id="menu-button"
               aria-expanded="true"
               aria-haspopup="true"
@@ -161,7 +175,7 @@ const Applicationtable = () => {
           </div>
           {downOpen && (
             <div
-              className="absolute mt-2 flex w-50 flex-col items-center justify-center rounded-md bg-white text-center shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              className="absolute mt-2 flex w-50 flex-col items-center justify-center rounded-md bg-white text-center shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-700"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="menu-button"
@@ -169,21 +183,21 @@ const Applicationtable = () => {
               <div className="py-1" role="none">
                 <a
                   href="#"
-                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100"
+                  className="block px-14 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   Completed
                 </a>
                 <a
                   href="#"
-                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100"
+                  className="block px-14 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   Pending
                 </a>
                 <a
                   href="#"
-                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100"
+                  className="block px-14 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   Failed
@@ -226,24 +240,9 @@ const Applicationtable = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
-            <td className="w-4 p-4">1</td>
-            <th
-              scope="row"
-              className="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
-            >
-              Engineer
-            </th>
-            <td className="px-6 py-4">1201</td>
-            <td className="px-6 py-4">yaskawa</td>
-            <td className="px-6 py-4">Customer</td>
-            <td className="px-6 py-4">Drivetype</td>
-            <td className="px-6 py-4">Servicetype</td>
-            <td className="px-6 py-4">Status</td>
-            <td className="px-6 py-4">
-              <View />
-            </td>
-          </tr>
+          {data.map((row) => (
+            <Applicationrow key={row.sno} row={row} />
+          ))}
           {/* <tr className="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
           <td className="w-4 p-4">
             <div className="flex items-center">
