@@ -13,18 +13,17 @@ const Employeetable = () => {
   ];
   return (
     <div>
-      <div className="w-full max-w-screen-2xl lg:px-4">
+      <div className="relative top-20 w-full max-w-screen-2xl lg:px-4">
         <div className="overflow-hidden bg-white shadow-lg dark:bg-gray-800 sm:rounded-lg">
-          <div className="flex flex-col space-y-3 p-4 md:flex-row md:items-center md:justify-between md:space-x-4 md:space-y-0">
-            <div className="flex flex-1 items-center space-x-2">
-              {/* <h5>
+          <div className="flex flex-1 items-center space-x-2">
+            {/* <h5>
                   <span className="text-gray-500">All Products:</span>
                   <span className="dark:text-white">123456</span>
                 </h5> */}
-              {/* <h5 className="ml-1 text-gray-500 dark:text-gray-400">
+            {/* <h5 className="ml-1 text-gray-500 dark:text-gray-400">
                   1-100 (436)
                 </h5> */}
-              {/* <button
+            {/* <button
                   type="button"
                   className="group"
                   data-tooltip-target="results-tooltip"
@@ -43,7 +42,7 @@ const Employeetable = () => {
                   </svg>
                   <span className="sr-only">More info</span>
                 </button> */}
-              {/* <div
+            {/* <div
                   id="results-tooltip"
                   role="tooltip"
                   className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
@@ -51,8 +50,8 @@ const Employeetable = () => {
                   Showing 1-100 of 436 results
                   <div className="tooltip-arrow" data-popper-arrow=""></div>
                 </div> */}
-            </div>
-            {/* <div className="flex flex-shrink-0 flex-col items-start space-y-3 md:flex-row md:items-center md:space-x-3 md:space-y-0 lg:justify-end">
+          </div>
+          {/* <div className="flex flex-shrink-0 flex-col items-start space-y-3 md:flex-row md:items-center md:space-x-3 md:space-y-0 lg:justify-end">
                 <button
                   type="button"
                   className="hover:text-primary-700 inline-flex flex-shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-medium text-gray-900 hover:bg-gray-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
@@ -72,7 +71,6 @@ const Employeetable = () => {
                   Table settings
                 </button>
               </div> */}
-          </div>
           <div className="mx-4 flex flex-col items-stretch justify-between space-y-3 border-t py-4 dark:border-gray-700 md:flex-row md:items-center md:space-x-3 md:space-y-0">
             <div className="w-full md:w-1/2">
               {/* <form className="flex items-center">
