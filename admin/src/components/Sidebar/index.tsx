@@ -54,7 +54,7 @@ const menuGroups = [
             viewBox="0,0,256,256"
           >
             <g
-              fill="black"
+              fill=""
               fill-rule="nonzero"
               stroke="none"
               stroke-width="1"
@@ -78,7 +78,7 @@ const menuGroups = [
         route: "/application",
       },
       {
-        icon: <Image src="/images/logo/customers.png" width={24} height={24} alt="img"className='text-gray-600 dark: text-gray-900'/>,
+        icon: <Image src="/images/logo/customers.png" width={24} height={24} alt="img" />,
         label: "Customers",
         route: "/customers",
       },
