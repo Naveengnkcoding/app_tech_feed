@@ -34,7 +34,7 @@ const Employeerow = ({ row }: { row: any }) => {
               data-drawer-target="drawer-update-product"
               data-drawer-show="drawer-update-product"
               aria-controls="drawer-update-product"
-              className="hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4"
+              className="hover:bg-primary-800 focus:ring-green-700 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center rounded-lg bg-green-600 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const Employeerow = ({ row }: { row: any }) => {
               type="button"
               data-modal-target="delete-modal"
               data-modal-toggle="delete-modal"
-              className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
+              className="flex items-center rounded-lg border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
