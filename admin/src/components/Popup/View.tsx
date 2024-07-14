@@ -14,7 +14,8 @@ const View = () => {
           className="rounded-md border border-red-500 bg-red-500 px-5 py-2 text-white hover:bg-red-600"
         >
           View
-        </button><Link href="/Individualpage">View</Link>
+        </button>
+        {/* <Link href="/Individualpage">View</Link> */}
       </div>
       <PopUp openPopUp={openPopup} closePopUp={HandleRemovePopUp} />
     </div>

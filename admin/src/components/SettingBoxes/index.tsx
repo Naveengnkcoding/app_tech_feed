@@ -11,7 +11,7 @@ import Link from "next/link";
 const SettingBoxes = () => {
   return (
     <>
-      <div className="grid grid-cols-5 gap-8">
+      <div className="relative top-10 grid grid-cols-5 gap-8">
         <div className="col-span-5 xl:col-span-3">
           <div className="rounded-[10px] border border-stroke bg-white shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card">
             <div className="border-b border-stroke px-7 py-4 dark:border-dark-3">
@@ -271,7 +271,7 @@ const SettingBoxes = () => {
                     name="profilePhoto"
                     id="profilePhoto"
                     accept="image/png, image/jpg, image/jpeg"
-                    className="absolute -z-1000 m-0 h-full w-full cursor-pointer p-0 opacity-0 outline-none"
+                    className="absolute m-0 h-full w-full cursor-pointer p-0 opacity-0 outline-none"
                   />
                   <div className="flex flex-col items-center justify-center">
                     <span className="flex h-13.5 w-13.5 items-center justify-center rounded-full border border-stroke bg-white dark:border-dark-3 dark:bg-gray-dark">
