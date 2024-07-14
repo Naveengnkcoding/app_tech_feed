@@ -67,7 +67,10 @@
         margin-bottom: 2vh;
       }
       .finp {
-        width: 50vw;
+        margin: 4px;
+        min-width: 50vw;
+        width: auto;
+        max-width: 190px;
         height: 32px;
         display: grid;
         align-items: center;
@@ -75,6 +78,7 @@
         border-radius: 3px;
         color: white;
         padding-left: 10px;
+        padding-right: 10px;
         font-weight: 100;
         font-family: Arial, Helvetica, sans-serif;
         cursor: pointer;
@@ -151,8 +155,12 @@
       }
       label {
         text-align: left;
-        font-size: 19px;
+        font-size: 17px;
+        font-family: Satoshi, sans-serif;
         font-weight: bold;
+        color: rgb(17 25 40);
+        margin-bottom: 0.75rem;
+        margin-top: 1rem;
       }
       .progress {
         background-color: grey;
@@ -177,7 +185,7 @@
         margin: 2vw;
         text-align: center;
         border-radius: 3vw;
-        width: 70vw;
+        width: 76vw;
         background-color: lightgrey;
         height: 14vh;
         line-height: 14vh;
@@ -214,14 +222,37 @@
         border: none;
         cursor: pointer;
       }
+      .rating {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .star {
+        color: #ccc;
+        cursor: pointer;
+      }
+
+      .star:hover {
+        color: #ffd700;
+      }
+
+      .star.active {
+        color: #ffd700;
+      }
     </style>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> -->
   </head>
   <body onload="next()">
     <div class="main">
       <div class="head">
-        <h2 id="aplh2">
-          Welcome!&nbsp;&nbsp;<a id="aplno" style="color: darkblue">Yaskawa</a>
+        <h2 id="aplh2" style="margin-bottom: 0; font-size: 23px">
+          Welcome!&nbsp;&nbsp;<a style="color: darkblue">Yaskawa</a>
         </h2>
+        <a
+          id="apln"
+          style="display: block; padding: 8px; padding-top: 0; color: darkgrey"
+        ></a>
         <!-- <h2>Application No:&nbsp;<a style="color: darkblue;">#123456789</a></h2> -->
         <div class="prgs-con">
           <div class="progress" id="progress"></div>
@@ -231,19 +262,25 @@
           <div id="c4" class="cir">4</div>
           <div id="c5" class="cir">5</div>
           <div id="c6" class="cir">6</div>
+          <div id="c7" style="display: none" class="cir">7</div>
         </div>
       </div>
       <!---------New Form 1 Start -->
       <form id="form1" style="display: none">
         <h2>New Application</h2>
-        <h3>Company Name</h3>
-        <input type="text" class="inp" placeholder="Company Name" required />
-        <h3>Engineer Name</h3>
-        <input type="text" class="inp" placeholder="Engineer Name" required />
-        <h3>Generate Token Number</h3>
+        <label>Engineer Name</label>
+        <input
+          type="text"
+          class="inp"
+          id="ename"
+          placeholder="Engineer Name"
+          required
+        />
+        <label>Generate Token Number</label>
         <input
           type="text"
           class="inp dis"
+          id="tokn"
           placeholder="#Generated Automatically"
           disabled
         />
@@ -257,105 +294,282 @@
       <!---------New Form 2 Start -->
       <form id="form2" style="display: none">
         <h2>Customer Info</h2>
+        <label>Company Name</label>
+        <input
+          type="text"
+          id="cmname"
+          class="inp"
+          placeholder="Company Name"
+          required
+        />
         <label>Customer Name</label>
-        <input type="text" class="inp" placeholder="Customer Name" required />
+        <input
+          type="text"
+          id="cuname"
+          class="inp"
+          placeholder="Customer Name"
+          required
+        />
         <label>Address</label>
-        <input type="text" class="inp" placeholder="Address" required />
+        <input
+          type="text"
+          id="cuadd"
+          class="inp"
+          placeholder="Address"
+          required
+        />
         <br />
         <label>Gst No</label>
-        <input type="text" class="inp" placeholder="Gst No" required />
+        <input
+          type="text"
+          id="cugst"
+          class="inp"
+          placeholder="Gst No"
+          required
+        />
+
+        <input type="submit" id="sub2" value="submit" hidden />
       </form>
       <!---------New Form 3 Start -->
       <form id="form3" style="display: none">
         <h2>Drive Details</h2>
         <label>Drive Type</label>
-        <select class="inp">
-          <option value="">Yaskawa Drive</option>
-          <option value="">Others</option>
+        <select id="drvtyp" onchange="drivelistload(this.value)" class="inp">
+          <option value="YASKAWA">Yaskawa Drive</option>
+          <option value="Others">Others</option>
         </select>
         <label>Model</label>
-        <input type="text" class="inp" placeholder="Drive Model" required />
+        <input
+          type="text"
+          class="inp"
+          placeholder="Drive Model"
+          list="kawa"
+          id="drvm"
+          required
+        />
+        <datalist id="kawa" class="inp">
+          <option value="A1000"></option>
+          <option value="V1000"></option>
+          <option value="J1000"></option>
+          <option value="GA500"></option>
+          <option value="GA700"></option>
+        </datalist>
+
         <label>KW</label>
-        <input type="text" class="inp" placeholder="Drive Kw" required />
+        <select id="kw" class="inp">
+          <option value="0.75KW">0.75KW</option>
+          <option value="1.1KW">1.1KW</option>
+          <option value="1.5KW">1.5KW</option>
+          <option value="2.2KW">2.2KW</option>
+          <option value="3KW">3KW</option>
+          <option value="3.5KW">3.5KW</option>
+          <option value="5.5KW">5.5KW</option>
+          <option value="7.5KW">7.5KW</option>
+          <option value="11KW">11KW</option>
+          <option value="15KW">15KW</option>
+          <option value="18.5KW">18.5KW</option>
+          <option value="22KW">22KW</option>
+          <option value="30KW">30KW</option>
+          <option value="37KW">37KW</option>
+          <option value="40KW">40KW</option>
+          <option value="45KW">45KW</option>
+          <option value="55KW">55KW</option>
+          <option value="75KW">75KW</option>
+          <option value="88KW">88KW</option>
+          <option value="90KW">90KW</option>
+          <option value="110KW">110KW</option>
+          <option value="190KW">190KW</option>
+          <option value="220KW">220KW</option>
+        </select>
         <label>AMPS.</label>
-        <input type="text" class="inp" placeholder="Amps" required />
+        <input type="text" class="inp" id="amps" placeholder="Amps" required />
         <br />
         <label>Drive img</label>
-        <input id="dimg" type="file" accept="image/*;capture=camera" hidden />
-        <label class="finp" for="dimg">Choose or Upload file</label>
+        <input id="dfii" type="file" accept="image/*;capture=camera" hidden />
+        <label class="finp" for="dfii">Choose or Upload file</label>
         <div class="ivw">
-          <img src="#" alt="Upload img to preview" id="divw" class="imgprv" />
+          <img
+            src="#"
+            onerror="this.style.display='none'"
+            alt="Upload img to preview"
+            id="divw"
+            class="imgprv"
+          />
+          <a id="dtv">Uplaod Image To PreView</a>
         </div>
+        <input type="submit" id="sub3" value="submit" hidden />
       </form>
       <!---------New Form 4 Start -->
       <form id="form4" style="display: none">
         <h2>Work Details</h2>
         <label>Work Taken</label>
-        <textarea class="inp txta" placeholder="Work Taken......"></textarea>
-        <label>Service Type</label>
-        <select class="inp">
-          <option value="">New Drive Install</option>
-          <option value="">Service Only</option>
-          <option value="">Field Check Only</option>
-        </select>
-        <!-------Only fo00r  Service Only -->
-        <label>Alarm & Error Faced by Customer</label>
         <textarea
           class="inp txta"
-          placeholder="Alarm Faced By Customer......"
+          id="wrk"
+          placeholder="Work Taken......"
         ></textarea>
-        <label>Alarm img</label>
-        <input id="aimg" type="file" accept="image/*;capture=camera" hidden />
-        <label for="aimg" class="finp">Choose or upload file</label>
-        <div class="ivw">
-          <img src="#" alt="Upload img to preview" id="aivw" class="imgprv" />
+        <label>Service Type</label>
+        <select class="inp" id="styp" onchange="serchang(this.value)">
+          <option value="0">New Drive Install</option>
+          <option value="1">Service Only</option>
+          <option value="2">Field Check Only</option>
+        </select>
+        <!-------Only fo00r  Service Only -->
+        <div id="alrmdiv" style="display: none">
+          <label id="alrhd" display="">Alarm & Error Faced by Customer</label>
+          <textarea
+            id="alrfac"
+            class="inp txta"
+            placeholder="Alarm Faced By Customer......"
+          ></textarea>
+          <label id="alrimhd">Alarm img</label>
+          <input id="afii" type="file" accept="image/*;capture=camera" hidden />
+          <label for="afii" id="aimgl" class="finp"
+            >Choose or upload file</label
+          >
+          <div id="avw" class="ivw">
+            <img
+              src="#"
+              onerror="this.style.display='none'"
+              id="aaivw"
+              class="imgprv"
+            />
+            <a id="atv">Upload Image to PreView</a>
+          </div>
         </div>
+        <br />
         <label>Work Status</label><br />
         &nbsp;&nbsp;&nbsp;
-        <input type="radio" id="rws1" name="wsts" value="" />
+        <input
+          onchange="wstas(this.value)"
+          type="radio"
+          id="rws1"
+          name="wsts"
+          value="1"
+        />
         <label for="rws1">Completed</label
         >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" id="rws2" name="wsts" value="" />
+        <input
+          type="radio"
+          id="rws2"
+          name="wsts"
+          onchange="wstas(this.value)"
+          value="0"
+        />
         <label for="rws2">No</label>
         <br /><br />
-        <label>Taken for Office</label><br />
-        &nbsp;&nbsp;&nbsp;
-        <input type="radio" id="tws1" name="tkn" value="" />
-        <label for="tws1">Yes</label
-        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" id="tws2" name="tkn" value="" />
-        <label for="tws2">No</label>
-        <input type="date" class="inp" id="idat" />
-        <input id="rimg" type="file" accept="image/*;capture=camera" hidden />
-        <label for="rimg" class="finp">Choose or upload file</label>
-        <div class="ivw">
-          <img src="#" alt="Upload img to preview" id="rivw" class="imgprv" />
+        <div id="wuncomp" style="display: none">
+          <label id="wntl">Taken for Office</label><br />
+          &nbsp;&nbsp;&nbsp;
+          <input
+            type="radio"
+            id="tws1"
+            name="tkn"
+            onchange="tko(this.value)"
+            value="1"
+          />
+          <label for="tws1">Yes</label
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input
+            type="radio"
+            onchange="tko(this.value)"
+            id="tws2"
+            name="tkn"
+            value="0"
+          />
+          <label for="tws2">No</label><br /><br />
+          <div id="tknbl" style="display: none">
+            <label>Check In Date</label>
+            <input type="date" class="inp" id="idat" />
+            <input
+              id="wfii"
+              type="file"
+              accept="image/*;capture=camera"
+              hidden
+            />
+            <label for="wfii" class="finp">Choose or upload file</label>
+            <div class="ivw">
+              <img
+                src="#"
+                onerror="this.style.display='none'"
+                id="wivw"
+                class="imgprv"
+              />
+              <a id="wtv">Upload Image to PreView</a>
+            </div>
+          </div>
         </div>
+        <input type="submit" id="sub4" value="submit" hidden />
       </form>
       <!---------New Form 5 Start -->
-      <form id="form5" style="display: nne">
+      <form id="form5" style="display: none">
+        <h2>Service Work Details</h2>
+        <label>Issue Faced</label>
+        <textarea
+          id="ifac"
+          class="inp txta"
+          placeholder="Problems Faced in Drive......"
+        ></textarea>
+        <label>Process Date</label>
+        <input type="date" id="pdat" class="inp" id="pdat" />
+        <label></label>
+        <select class="inp" id="serabl" onchange="">
+          <option value="Servicable">Servicable</option>
+          <option value="Non Service">Non Service</option>
+        </select>
+        <label>Complete Date</label>
+        <input type="date" class="inp" id="cdat" />
+        <label>Materials Replaced</label>
+        <input
+          type="text"
+          class="inp"
+          style="display: inline-flex; width: 65vw"
+          id="minput"
+        />
+        <input type="button" style="display: inline-flex; border-radius: 3px;
+        width: 12vw; height: 5vh; background-color: darkblue; color: white;
+        font-weight: bold; padding: 10px; border: none;style="none" value="+"
+        id="madd" />
+
+        <ul id="mlist">
+          <li><b>Materials</b></li>
+        </ul>
+      </form>
+      <!-- ///////FForm 6 sATRTing -->
+      <form id="form6" style="display: none">
         <h2>Customer Feedback</h2>
         <label>About the Company</label>
         <input
           type="text"
           class="inp"
-          placeholder="Write something.."
+          id="abtc"
+          placeholder="About Company.."
           required
         />
         <label>About The Engineer</label>
         <input
           type="text"
           class="inp"
-          placeholder="Write something.."
+          id="abte"
+          placeholder="About Engineer.."
           required
         />
-        <label>About The Office</label>
+        <label>About The Work</label>
         <input
+          id="abtw"
           type="text"
           class="inp"
-          placeholder="Write something.."
+          placeholder="About Work..."
           required
         />
+        <label>Star Rating</label>
+        <div class="rating">
+          <span class="star" data-rating="1">&#x2605;</span>
+          <span class="star" data-rating="2">&#x2605;</span>
+          <span class="star" data-rating="3">&#x2605;</span>
+          <span class="star" data-rating="4">&#x2605;</span>
+          <span class="star" data-rating="5">&#x2605;</span>
+        </div>
         <!-- <label>E-sign</label>
         <div class="signature-container" style="display: none">
           <canvas id="signature-pad" width="310" height="150"></canvas>
@@ -365,6 +579,31 @@
         <div style="display: none">
           <img src="#" style="display: none" id="esivw" />
         </div> -->
+        <label>E-Sign</label><br />
+        <section class="signature-component">
+          <!-- width="100" height="150" -->
+          <canvas
+            id="signature-pad"
+            style="
+              width: 100%;
+              height: 100%;
+              margin-bottom: 10px;
+              margin-top: 7px;
+            "
+          ></canvas>
+          <div>
+            <a class="ebtn" id="clear">Clear</a>
+            <a class="ebtn" id="upload">Upload</a>
+          </div>
+        </section>
+        <div>
+          <img
+            src="#"
+            style="display: none; width: 100%; height: auto"
+            id="esivw"
+          />
+        </div>
+        <!--         Second edition
         <div id="signature-pad" class="signature-pad">
           <div class="signature-pad--body">
             <canvas></canvas>
@@ -376,10 +615,12 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
+
+        <input type="submit" id="sub6" value="submit" hidden />
       </form>
       <!---------New Form 6 Start -->
-      <form id="form6" style="display: none">
+      <form id="form7" style="display: none">
         <center>
           <div style="width: 100%; height: 60vh; padding-top: 20vh">
             <h2 style="color: green">Congratulaions!</h2>
@@ -395,185 +636,60 @@
           style="float: left; display: none"
           >Back</a
         >
-        <a class="but" id="nxt" onclick="next()" style="float: right" onclick=""
-          >Save >></a
-        >
+        <a class="but" id="nxt" style="float: right" onclick="">Save >></a>
       </div>
     </div>
+    <script src="main.js"></script>
     <script>
-      // Get the input element
-      const imageUpload = document.getElementById("dimg");
-      // Add an event listener to detect file upload
-      imageUpload.addEventListener("change", function () {
-        // Get the selected file
-        const file = imageUpload.files[0];
-        // Create a FileReader object
-        const reader = new FileReader();
-        // Set up the reader's onload event handler
-        reader.onload = function (e) {
-          // Get the image data URL
-          const imageDataUrl = e.target.result;
-          // Display the uploaded image
-          const imagePreview = document.getElementById("divw");
-          imagePreview.src = imageDataUrl;
-        };
-        // Read the selected file as Data URL
-        reader.readAsDataURL(file);
-      });
-      const aimageUpload = document.getElementById("aimg");
-      // Add an event listener to detect file upload
-      aimageUpload.addEventListener("change", function () {
-        // Get the selected file
-        const file = aimageUpload.files[0];
-        // Create a FileReader object
-        const reader = new FileReader();
-        // Set up the reader's onload event handler
-        reader.onload = function (e) {
-          // Get the image data URL
-          const aimageDataUrl = e.target.result;
-          // Display the uploaded image
-          const aimagePreview = document.getElementById("aivw");
-          aimagePreview.src = aimageDataUrl;
-        };
-        // Read the selected file as Data URL
-        reader.readAsDataURL(file);
-      });
-      const rimageUpload = document.getElementById("rimg");
-      // Add an event listener to detect file upload
-      rimageUpload.addEventListener("change", function () {
-        // Get the selected file
-        const file = rimageUpload.files[0];
-        // Create a FileReader object
-        const reader = new FileReader();
-        // Set up the reader's onload event handler
-        reader.onload = function (e) {
-          // Get the image data URL
-          const rimageDataUrl = e.target.result;
-          // Display the uploaded image
-          const rimagePreview = document.getElementById("rivw");
-          rimagePreview.src = rimageDataUrl;
-        };
-        // Read the selected file as Data URL
-        reader.readAsDataURL(file);
-      });
-      let nid = 0;
+      // Star Rating
+      const rating = document.querySelector(".rating");
+      const stars = rating.querySelectorAll(".star");
+      let r = 0;
 
-      function back() {
-        switch (nid) {
-          case 2:
-            document.getElementById("bck").style.display = "none";
-            document.getElementById("form2").style.display = "none";
-            document.getElementById("form1").style.display = "block";
-            break;
-          case 3:
-            document.getElementById("form3").style.display = "none";
-            document.getElementById("form2").style.display = "block";
-            break;
-          case 4:
-            document.getElementById("form4").style.display = "none";
-            document.getElementById("form3").style.display = "block";
-            break;
-          case 5:
-            document.getElementById("form5").style.display = "none";
-            document.getElementById("form4").style.display = "block";
-            break;
-          case 6:
-            document.getElementById("form6").style.display = "none";
-            document.getElementById("form5").style.display = "block";
-            document.getElementById("nxt").style.display = "grid";
-            break;
-        }
-        prog(121);
-      }
-      function next(e) {
-        switch (nid) {
-          case 0:
-            document.getElementById("form1").style.display = "block";
-            break;
-          case 1:
-            document.getElementById("bck").style.display = "grid";
-            document.getElementById("aplh2").innerHTML = "Application No: ";
-            document.getElementById("form1").style.display = "none";
-            document.getElementById("form2").style.display = "block";
-            break;
-          case 2:
-            document.getElementById("form2").style.display = "none";
-            document.getElementById("form3").style.display = "block";
-            break;
-          case 3:
-            document.getElementById("form3").style.display = "none";
-            document.getElementById("form4").style.display = "block";
-            break;
-          case 4:
-            document.getElementById("form4").style.display = "none";
-            document.getElementById("form5").style.display = "block";
-            break;
-          case 5:
-            document.getElementById("form5").style.display = "none";
-            document.getElementById("form6").style.display = "block";
-            document.getElementById("nxt").style.display = "none";
-            break;
-        }
-        prog(0);
-      }
-      function prog(e) {
-        if (e == 0) {
-          switch (nid) {
-            case 1:
-              document.getElementById("c1").classList.replace("act", "fill");
-              document.getElementById("c2").classList.add("act");
-              break;
-            case 2:
-              document.getElementById("c2").classList.replace("act", "fill");
-              document.getElementById("c3").classList.add("act");
-              break;
-            case 3:
-              document.getElementById("c3").classList.replace("act", "fill");
-              document.getElementById("c4").classList.add("act");
-              break;
-            case 4:
-              document.getElementById("c4").classList.replace("act", "fill");
-              document.getElementById("c5").classList.add("act");
-              break;
-            case 5:
-              document.getElementById("c5").classList.replace("act", "fill");
-              document.getElementById("c6").classList.add("act");
-              break;
+      stars.forEach((star, index) => {
+        star.addEventListener("click", () => {
+          stars.forEach((s) => s.classList.remove("active"));
+          for (let i = 0; i <= index; i++) {
+            stars[i].classList.add("active");
+            r = index + 1;
           }
-          nid = nid + 1;
-          console.log(nid);
-        } else {
-          switch (nid) {
-            case 1:
-              break;
-            case 2:
-              document.getElementById("c2").classList.remove("act");
-              document.getElementById("c1").classList.replace("fill", "act");
-              break;
-            case 3:
-              document.getElementById("c3").classList.remove("act");
-              document.getElementById("c2").classList.replace("fill", "act");
-              break;
-            case 4:
-              document.getElementById("c4").classList.remove("act");
-              document.getElementById("c3").classList.replace("fill", "act");
-              break;
-            case 5:
-              document.getElementById("c5").classList.remove("act");
-              document.getElementById("c4").classList.replace("fill", "act");
-              break;
-            case 6:
-              document.getElementById("c6").classList.remove("act");
-              document.getElementById("c5").classList.replace("fill", "act");
-              break;
-          }
-          nid = nid - 1;
-          console.log(nid);
-        }
-      }
+        });
+      });
     </script>
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
-    <script src="signature_pad.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+      import {
+        getDatabase,
+        set,
+        ref,
+        get,
+        remove,
+      } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      // const firebaseConfig = {
+      //   apiKey: "AIzaSyAiaPFkuinJ25wa8gN7kU_aFgM9tdxdeGc",
+      //   authDomain: "rcf22-785e0.firebaseapp.com",
+      //   databaseURL: "https://rcf22-785e0-default-rtdb.firebaseio.com",
+      //   projectId: "rcf22-785e0",
+      //   storageBucket: "rcf22-785e0.appspot.com",
+      //   messagingSenderId: "371429608822",
+      //   appId: "1:371429608822:web:e5f2a3e1d0912aa56ebe57",
+      //   measurementId: "G-SSV1G6E8ED",
+      // };
+
+      // // Initialize Firebase (make sure firebaseConfig is defined correctly)
+      // firebase.initializeApp(firebaseConfig);
+
+      // Get a reference to the database
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="sign.js"></script>
+    <script src="formation.js"></script>
+    <script type="module" src="db.js"></script>
   </body>
 </html>
