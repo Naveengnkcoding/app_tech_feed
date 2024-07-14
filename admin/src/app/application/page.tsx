@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, ReactNode } from "react";
-import next from "next";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
