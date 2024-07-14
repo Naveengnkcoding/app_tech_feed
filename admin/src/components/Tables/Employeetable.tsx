@@ -1,16 +1,18 @@
 import next from "next";
 import Employeerow from "./Employeesrow";
 
+const data = [
+  {
+    sno: 1,
+    empname: "Employee",
+    desg: "Designation",
+    phno: 9827321222,
+    bg: "A+ve",
+  },
+];
+
 const Employeetable = () => {
-  const data = [
-    {
-      sno: 1,
-      empname: "Employee",
-      desg: "Designation",
-      phno: 9827321222,
-      bg: "A+ve",
-    },
-  ];
+
   return (
     <div>
       <div className="relative top-20 w-full max-w-screen-2xl lg:px-4">

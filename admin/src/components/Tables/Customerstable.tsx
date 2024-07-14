@@ -1,16 +1,17 @@
 import next from "next";
 import Customerrow from "./Customerrow";
 
+const data = [
+  {
+    comp: "Yaskawa",
+    name: "Name",
+    add: "USA",
+    gst: "GSTIN8093284",
+    phone: 9232110033,
+  },
+];
+
 const Tablecust = ({}) => {
-  const data = [
-    {
-      comp: "Yaskawa",
-      name: "Name",
-      add: "USA",
-      gst: "GSTIN8093284",
-      phone: 9232110033,
-    },
-  ];
   return (
     <div>
       <div className="relative top-20 max-w-screen-2xl overflow-x-auto shadow-md sm:rounded-lg">

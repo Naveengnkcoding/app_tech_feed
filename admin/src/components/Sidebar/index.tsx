@@ -78,12 +78,12 @@ const menuGroups = [
         route: "/application",
       },
       {
-        icon: <img src="/images/logo/customers.png" width={24} height={24} />,
+        icon: <Image src="/images/logo/customers.png" width={24} height={24} alt="img"className='text-gray-600 dark: text-gray-900'/>,
         label: "Customers",
         route: "/customers",
       },
       {
-        icon: <img src="/images/logo/Employee.png" width={24} height={24} />,
+        icon: <Image src="/images/logo/Employee.png" width={24} height={24} alt="imaage" />,
         label: "Employees",
         route: "/employees",
       },
@@ -99,7 +99,7 @@ const menuGroups = [
           >
             {" "}
             <g
-              fill="black"
+              fill=""
               fill-rule="nonzero"
               stroke="none"
               stroke-width="1"

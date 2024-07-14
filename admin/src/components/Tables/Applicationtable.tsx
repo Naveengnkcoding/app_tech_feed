@@ -4,6 +4,21 @@ import { useState } from "react";
 import Applicationrow from "./Applicationrow";
 // import View from "@/components/Popup/View";
 
+const data = [
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
+];
+
+
+
 const Applicationtable = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [Open, setOpen] = useState(false);
@@ -21,22 +36,10 @@ const Applicationtable = () => {
     setDownopen(!downOpen);
   };
 
-  const data = [
-    {
-      sno: 1,
-      engname: "Engineer",
-      appno: 1201,
-      comp: "Company",
-      custname: "Customer",
-      drtype: "Driver",
-      srtype: "Service",
-      status: "completed",
-    },
-  ];
 
   return (
     <div className="relative top-20 overflow-x-auto shadow-md sm:rounded-lg">
-      <div className="flex-column justify-left flex flex-wrap items-center gap-2 space-y-4 pb-4 sm:flex-row sm:space-y-0">
+      <div className="flex-column justify-left flex flex-wrap items-center gap-4 space-y-4 pb-4 sm:flex-row sm:space-y-0">
         <label className="sr-only">Search</label>
         <div className="relative">
           <div className="rtl:inset-r-0 pointer-events-none absolute inset-y-0 left-0 flex items-center ps-3 rtl:right-0">
