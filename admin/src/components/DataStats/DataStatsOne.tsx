@@ -25,7 +25,7 @@ const dataStatsList = [
     ),
     color: "#3FD97F",
     title: "Total services",
-    value: "3.456K",
+    value: "88",
     growthRate: 0.43,
   },
   {
@@ -47,7 +47,7 @@ const dataStatsList = [
     ),
     color: "#FF9C55",
     title: "Total customers",
-    value: "$42.2K",
+    value: "88",
     growthRate: 4.35,
   },
   {
@@ -75,7 +75,7 @@ const dataStatsList = [
     ),
     color: "#8155FF",
     title: "Total sales",
-    value: "2.450",
+    value: <a>&#8377;8888</a>,
     growthRate: 2.59,
   },
   {
@@ -113,7 +113,7 @@ const dataStatsList = [
     ),
     color: "#18BFFF",
     title: "Total employees",
-    value: "3.465",
+    value: "88",
     growthRate: -0.95,
   },
 ];

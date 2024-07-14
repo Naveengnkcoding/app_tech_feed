@@ -45,7 +45,7 @@ const menuGroups = [
       },
       {
         icon: (
-          <svg
+          <svg 
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
@@ -54,7 +54,7 @@ const menuGroups = [
             viewBox="0,0,256,256"
           >
             <g
-              fill="#343434"
+              fill=""
               fill-rule="nonzero"
               stroke="none"
               stroke-width="1"
@@ -78,12 +78,12 @@ const menuGroups = [
         route: "/application",
       },
       {
-        icon: <img src="/images/logo/customers.png" width={24} height={24} />,
+        icon: <Image src="/images/logo/customers.png" width={24} height={24} alt="img" />,
         label: "Customers",
         route: "/customers",
       },
       {
-        icon: <img src="/images/logo/Employee.png" width={24} height={24} />,
+        icon: <Image src="/images/logo/Employee.png" width={24} height={24} alt="imaage" />,
         label: "Employees",
         route: "/employees",
       },
@@ -99,7 +99,7 @@ const menuGroups = [
           >
             {" "}
             <g
-              fill="#343434"
+              fill=""
               fill-rule="nonzero"
               stroke="none"
               stroke-width="1"

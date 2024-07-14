@@ -10,7 +10,7 @@ import ChartOne from "@/components/Charts/ChartOne";
 
 const ECommerce: React.FC = () => {
   return (
-    <>
+    <div className="relative top-20">
       <title>Dashboard</title>
       <DataStatsOne />
 
@@ -24,7 +24,7 @@ const ECommerce: React.FC = () => {
         </div>
         <ChatCard /> */}
       </div>
-    </>
+    </div>
   );
 };
 
