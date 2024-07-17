@@ -1,7 +1,5 @@
 import PopUp from "@/components/Popup/Index";
-import Link from "next/link";
 import Image from "next/image";
-import next from "next";
 
 const driveimg = "";
 
