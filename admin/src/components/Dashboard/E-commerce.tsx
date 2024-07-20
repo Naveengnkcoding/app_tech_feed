@@ -10,7 +10,7 @@ import ChartOne from "@/components/Charts/ChartOne";
 
 const ECommerce: React.FC = () => {
   return (
-    <div className="relative top-20">
+    <div className="relative">
       <title>Dashboard</title>
       <DataStatsOne />
 

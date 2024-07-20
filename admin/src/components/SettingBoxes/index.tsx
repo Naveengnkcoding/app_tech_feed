@@ -11,7 +11,7 @@ import Link from "next/link";
 const SettingBoxes = () => {
   return (
     <>
-      <div className="relative top-10 grid grid-cols-5 gap-8">
+      <div className="relative grid grid-cols-5 gap-8">
         <div className="col-span-5 xl:col-span-3">
           <div className="rounded-[10px] border border-stroke bg-white shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card">
             <div className="border-b border-stroke px-7 py-4 dark:border-dark-3">

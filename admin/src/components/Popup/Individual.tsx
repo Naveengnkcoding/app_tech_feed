@@ -5,9 +5,9 @@ const driveimg = "";
 
 const Individual = () => {
   return (
-    <div className="bg-gray-300 h-[300vh]">
-      <div className="fixed inset-0 flex  justify-center overflow-y-scroll bg-black bg-opacity-20 backdrop-blur-sm">
-        <div className="h-[300vh] overflow-scroll-y relative overflow-scroll-y w-[2480px] border-e-emerald-600 bg-white p-2 py-5 shadow-inner md:w-1/2">
+    <div className="bg-white h-[300vh]">
+      <div className="fixed inset-0 flex justify-center overflow-y-scroll">
+        <div className="h-[300vh] overflow-scroll-y relative  w-[2480px] border-e-emerald-600 bg-white p-2 py-5 shadow-xl md:w-1/2">
           <div className="absolute w-[2480px] items-center justify-center 2xsm:h-[300vh] 2xsm:w-full xsm:h-[300vh] xsm:w-full md:h-[300vh] md:w-full lg:h-[300vh] xl:h-[300vh] 2xl:h-[300vh]">
             <h2 className="py-1 text-center text-xl font-semibold">
               Application details

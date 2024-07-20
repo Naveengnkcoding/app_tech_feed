@@ -17,8 +17,6 @@ const data = [
   },
 ];
 
-
-
 const Applicationtable = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [Open, setOpen] = useState(false);
@@ -38,7 +36,7 @@ const Applicationtable = () => {
 
 
   return (
-    <div className="relative top-20 overflow-x-auto shadow-md sm:rounded-lg">
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <div className="flex-column justify-left flex flex-wrap items-center gap-4 space-y-4 pb-4 sm:flex-row sm:space-y-0">
         <label className="sr-only">Search</label>
         <div className="relative">
