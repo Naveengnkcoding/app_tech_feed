@@ -64,7 +64,7 @@ const DropdownNotification = () => {
             </svg>
 
             <span
-              className={`absolute -top-0.5 right-0 z-1 h-2.5 w-2.5 rounded-full border-2 border-gray-2 bg-red-light dark:border-dark-3 ${
+              className={`absolute -top-0.5 right-0 z-1 h-2.5 w-2.5 dark:border-dark-3 ${
                 !notifying ? "hidden" : "inline"
               }`}
             >

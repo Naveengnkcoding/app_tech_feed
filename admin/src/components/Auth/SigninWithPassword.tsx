@@ -8,7 +8,7 @@ export default function SigninWithPassword() {
   });
 
   return (
-    <form>
+    <form className="relative bottom-30">
       <div className="mb-4">
         <label
           htmlFor="Username"
@@ -131,7 +131,7 @@ export default function SigninWithPassword() {
       <div className="mb-4.5">
         <button
           type="submit"
-          className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-primary p-4 font-medium text-white transition hover:bg-opacity-90"
+          className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-[#0056b9] p-4 font-medium text-white transition hover:bg-opacity-90"
         >
           Sign In
         </button>

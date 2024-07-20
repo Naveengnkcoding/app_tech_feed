@@ -15,7 +15,7 @@ const Employeetable = () => {
 
   return (
     <div>
-      <div className="relative top-20 w-full max-w-screen-2xl lg:px-4">
+      <div className="relative w-full max-w-screen-2xl lg:px-4">
         <div className="overflow-hidden bg-white shadow-lg dark:bg-gray-800 sm:rounded-lg">
           <div className="flex flex-1 items-center space-x-2">
             {/* <h5>
