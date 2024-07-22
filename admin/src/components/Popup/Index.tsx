@@ -16,7 +16,7 @@ const PopUp = ({ openPopUp, closePopUp }:any) => {
     <div
       id='ModelContainer'
       onClick={handleClosePopUp}
-      className='fixed inset-0 bg-black flex justify-center items-center bg-opacity-20 backdrop-blur-sm overflow-y-scroll'>
+      className='fixed z-[1000] inset-0 bg-black flex justify-center items-center bg-opacity-20 backdrop-blur-sm overflow-y-scroll'>
       <div>
         <Individual />
       </div>

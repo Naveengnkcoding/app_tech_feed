@@ -58,9 +58,9 @@ const Individual = () => {
       <div className="fixed inset-0 flex justify-center overflow-y-scroll">
         <div
           ref={contentRef}
-          className="overflow-scroll-y relative h-[430vh] w-[2480px] border-e-emerald-600 bg-white p-2 py-5 shadow-xl md:w-1/2"
+          className="overflow-scroll-y relative h-[430vh] w-[80vw] border-e-emerald-600 bg-white p-2 py-5 shadow-xl md:w-1/2"
         >
-          <div className="absolute w-[2480px] items-center justify-center 2xsm:h-[300vh] 2xsm:w-full xsm:h-[300vh] xsm:w-full md:h-[300vh] md:w-full lg:h-[300vh] xl:h-[300vh] 2xl:h-[300vh]">
+          <div className="absolute w-[100vw] items-center justify-center 2xsm:h-[300vh] 2xsm:w-full xsm:h-[300vh] xsm:w-full md:h-[300vh] md:w-full lg:h-[300vh] xl:h-[300vh] 2xl:h-[300vh]">
             <h2 className="py-1 text-center text-xl font-semibold">
               Application details
             </h2>
