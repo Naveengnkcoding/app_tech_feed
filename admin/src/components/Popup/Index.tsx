@@ -1,27 +1,49 @@
-import React from 'react';
-import Individual from './Individual';
+'use client'
 
-const PopUp = ({ openPopUp, closePopUp }:any) => {
+import { useState, useRef, useEffect } from 'react'
 
-  const handleClosePopUp = (e:any) => {
-    console.log('Clicked:', e.target.id);  // Debugging line to ensure the click event is captured
-    if (e.target.id === 'ModelContainer') {
-      closePopUp();
+interface PopupProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const popupRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
     }
-  }
 
-  if (!openPopUp) return null;
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
 
   return (
-    <div
-      id='ModelContainer'
-      onClick={handleClosePopUp}
-      className='fixed z-[1000] inset-0 bg-black flex justify-center items-center bg-opacity-20 backdrop-blur-sm overflow-y-scroll'>
-      <div>
-        <Individual />
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/20 backdrop-blur-lg">
+      <div 
+        ref={popupRef}
+        className="bg-white w-full max-w-4xl p-6 rounded shadow-lg"
+      >
+        <div className="relative w-full aspect-[1/1.414]">
+          <div className="absolute inset-0 flex flex-col justify-center items-center p-4">
+            <div className="w-full h-full overflow-auto">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default PopUp;
+export default Popup

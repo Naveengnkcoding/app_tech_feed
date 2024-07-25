@@ -1,27 +1,24 @@
-"use client";
-import React, { useState } from "react";
-import PopUp from "./Index";
-import Link from "next/link";
+// pages/index.js
+import { useState } from 'react';
+import Popup from './Index';
 
-const View = () => {
-  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+const Home = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
-  const openPopUp = () => setIsPopUpOpen(true);
-  const closePopUp = () => setIsPopUpOpen(false);
+  const openPopup = () => setIsPopupOpen(true)
+  const closePopup = () => setIsPopupOpen(false)
+
   return (
-    <div className="flex w-full items-center justify-left p-5">
-      <div>
-        <button
-          onClick={() => setIsPopUpOpen(true)}
-          className="rounded-md border border-red-500 bg-red-500 px-5 py-2 text-white hover:bg-red-600"
-        >
-          View
-        </button>
-        {/* <Link href="/Individualpage">View</Link> */}
-      </div>
-      <PopUp openPopUp={isPopUpOpen} closePopUp={closePopUp} />
+    <div className="flex items-center justify-center">
+      <button
+        className="px-4 py-2 bg-red-600 rounded-lg text-white border-none outline-none focus:border-none focus:outline-none"
+        onClick={openPopup}
+      >
+        View
+      </button>
+      <Popup isOpen={isPopupOpen} onClose={closePopup} />
     </div>
   );
 };
 
-export default View;
+export default Home;
