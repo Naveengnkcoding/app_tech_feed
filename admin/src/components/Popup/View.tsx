@@ -1,24 +1,30 @@
-// pages/index.js
-import { useState } from 'react';
-import Popup from './Index';
+"use client"
+import Link from "next/link";
+import PopUp from "./Index";
+import { useState } from "react";
 
-const Home = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+const View = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  const HandleRemovePopUp = () => setOpenPopup(false);
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
 
-  const openPopup = () => setIsPopupOpen(true)
-  const closePopup = () => setIsPopupOpen(false)
-
+  const openPopUp = () => setIsPopUpOpen(true);
+  const closePopUp = () => setIsPopUpOpen(false);
   return (
-    <div className="flex items-center justify-center">
-      <button
-        className="px-4 py-2 bg-red-600 rounded-lg text-white border-none outline-none focus:border-none focus:outline-none"
-        onClick={openPopup}
-      >
-        View
-      </button>
-      <Popup isOpen={isPopupOpen} onClose={closePopup} />
+    <div className="flex w-full items-center justify-left p-5">
+      <div>
+        <button
+          onClick={() => setOpenPopup(true)}
+          className="rounded-md border border-red-500 bg-red-500 px-5 py-2 text-white hover:bg-red-600"
+        >
+          View
+        </button>
+        {/* <Link href="/Individualpage">View</Link> */}
+      </div>
+      <PopUp openPopUp={openPopup} closePopUp={HandleRemovePopUp} />
+      <PopUp openPopUp={isPopUpOpen} closePopUp={closePopUp} />
     </div>
   );
 };
 
-export default Home;
+export default View;
