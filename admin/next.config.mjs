@@ -1,7 +1,6 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost"],
     remotePatterns: [
       {
         protocol: "https",
@@ -21,6 +20,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "firebasestorage.googleapis.com",
+        port: ""
+      },
+      {
+        protocol: "https",
+        hostname: "via.placeholder.com",
         port: ""
       },
       {

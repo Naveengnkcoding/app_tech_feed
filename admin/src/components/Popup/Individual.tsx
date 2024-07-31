@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import { TiStarFullOutline } from "react-icons/ti";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
@@ -35,7 +36,7 @@ const Individual = () => {
 
         const loadedImages: Partial<ImageUrls> = {};
         for (const [key, url] of Object.entries(imageUrls)) {
-          const img = new Image();
+          const img = document.createElement('img');
           img.src = url;
           await new Promise<void>((resolve) => {
             img.onload = () => resolve();
@@ -402,19 +403,19 @@ const Individual = () => {
           <div className="flex items-center justify-around p-2">
             <div className="flex flex-col items-center justify-center gap-2">
               <a className="text-md pb-2 font-bold text-black">Drive Image</a>
-              <img src={images.driveImg} width="200px" height="100px" alt="Drive" />
+              <Image src={images.driveImg} width={200} height={100} alt="Drive" />
             </div>
             <div className="flex flex-col items-center justify-center gap-2">
               <a className="text-md pb-2 font-bold text-black">Alarm Image</a>
-              <img src={images.alarmImg} width="200px" height="100px" alt="Alarm" />
+              <Image src={images.alarmImg} width={200} height={100} alt="Alarm" />
             </div>
             <div className="flex flex-col items-center justify-center gap-2">
               <a className="text-md pb-2 font-bold text-black">Work Image</a>
-              <img src={images.workImg} width="200px" height="100px" alt="Work" />
+              <Image src={images.workImg} width={200} height={100} alt="Work" />
             </div>
             <div className="flex flex-col items-center justify-center gap-2">
               <a className="text-md pb-2 font-bold text-black">Esign</a>
-              <img src={images.eSign} width="200px" height="100px" alt="E-sign" />
+              <Image src={images.eSign} width={200} height={100} alt="E-sign" />
             </div>
         </div>
       </div>
