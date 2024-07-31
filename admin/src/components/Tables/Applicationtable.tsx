@@ -15,6 +15,86 @@ const data = [
     srtype: "Service",
     status: "completed",
   },
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Engineer",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "Service",
+    status: "completed",
+  },
 ];
 
 const Applicationtable = () => {
@@ -125,21 +205,21 @@ const Applicationtable = () => {
               <div className="py-1" role="none">
                 <a
                   href="#"
-                  className="text-balck block px-9 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
+                  className="text-black block px-9 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   New installation
                 </a>
                 <a
                   href="#"
-                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
+                  className="text-black block px-4 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   New service
                 </a>
                 <a
                   href="#"
-                  className="text-balck block px-4 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
+                  className="text-black block px-4 py-2 text-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
                   role="menuitem"
                 >
                   New check
