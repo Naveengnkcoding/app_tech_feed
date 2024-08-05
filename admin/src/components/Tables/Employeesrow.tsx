@@ -3,31 +3,30 @@ import next from "next";
 const Employeerow = ({ row }: { row: any }) => {
   return (
     <>
-      <tr className="border-b hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+      <tr className=" hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
         <td className="w-4 p-4">
-          <div className="flex items-center">{row.sno}</div>
+          <div className="flex items-center justify-center">{row.sno}</div>
         </td>
         <th
           scope="row"
-          className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
+          className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 dark:text-white"
         >
-          <div className="mr-3 flex items-center">{row.empname}</div>
+          <div className="px-4">{row.empname}</div>
         </th>
-        <td className="px-4 py-3">
+        <td className="px-4 py-2">
           <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
             {row.desg}
           </span>
         </td>
-        <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+        <td className="whitespace-nowrap px-7 py-2 font-medium text-gray-900 dark:text-white">
           <div className="flex items-center">
-            <div className=""></div>
             {row.phno}
           </div>
         </td>
-        <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+        <td className="whitespace-nowrap px-10 py-2 font-medium text-gray-900 dark:text-white">
           {row.bg}
         </td>
-        <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
+        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 dark:text-white">
           <div className="flex items-center space-x-4">
             <button
               type="button"

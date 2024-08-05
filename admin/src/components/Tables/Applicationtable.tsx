@@ -135,8 +135,8 @@ const Applicationtable = () => {
   };
 
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <div className="flex-column justify-left flex flex-wrap items-center gap-4 space-y-4 pb-4 sm:flex-row sm:space-y-0">
+    <div className="relative overflow-x-auto sm:rounded-lg">
+      <div className="flex-column justify-left flex flex-wrap items-center gap-4 space-y-6 pb-2 sm:flex-row sm:space-y-0">
         <label className="sr-only">Search</label>
         <div className="relative">
           <div className="rtl:inset-r-0 pointer-events-none absolute inset-y-0 left-0 flex items-center ps-3 rtl:right-0">
@@ -157,7 +157,7 @@ const Applicationtable = () => {
           <input
             type="text"
             id="table-search"
-            className="block w-80 rounded-lg border border-gray-600 bg-gray-50 p-2 ps-10 text-sm text-gray-900 focus:border focus:border-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            className="block w-100 rounded-lg border border-gray-600 bg-gray-50 p-2 ps-10 text-sm text-gray-900 focus:border focus:border-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="Search for items"
           />
         </div>
@@ -361,7 +361,7 @@ const Applicationtable = () => {
         <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400 rtl:text-right">
           <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="p-4">
+              <th scope="col" className="px-6">
                 S.no
               </th>
               <th scope="col" className="px-6 py-3">
@@ -385,7 +385,7 @@ const Applicationtable = () => {
               <th scope="col" className="px-6 py-3">
                 Status
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-8 py-3">
                 Action
               </th>
             </tr>

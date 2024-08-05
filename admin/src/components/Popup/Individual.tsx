@@ -4,9 +4,13 @@ import Image from "next/image";
 import { TiStarFullOutline } from "react-icons/ti";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
+import { FaJarWheat } from "react-icons/fa6";
+import jsVectorMap from "jsvectormap";
+import { PiPawPrintLight } from "react-icons/pi";
 
 const placeholderImg = "https://via.placeholder.com/200x100?text=Loading...";
 const headerLogo = "/images/logo/header_logo.png";
+const app_no = 22039170323;
 
 interface ImageUrls {
   driveImg: string;
@@ -67,69 +71,58 @@ const Individual = () => {
   const generatePDF = async () => {
     if (pdfContentRef.current) {
       const content = pdfContentRef.current;
+      const pdf = new jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: "a4"
+      });
+  
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
   
       const canvas = await html2canvas(content, {
-        scale: 5, // Reduced scale for better fit
+        scale: 1,
         useCORS: true,
         logging: true,
       });
   
-      const imgData = canvas.toDataURL("image/jpeg", 1.0);
-      const pdf = new jsPDF("p", "mm", "a4");
-  
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = pdf.internal.pageSize.getHeight();
       const imgWidth = canvas.width;
       const imgHeight = canvas.height;
   
-      // Calculate scaling factors for width and height
-      const scaleX = pdfWidth / imgWidth;
-      const scaleY = pdfHeight / imgHeight;
+      // Calculate the scaling factor
+      const scale = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
   
-      // Use the smaller scaling factor to ensure the entire content fits
-      const scale = Math.min(scaleX, scaleY);
+      // Calculate the centered position
+      const x = (pdfWidth - imgWidth * scale) / 2;
+      const y = (pdfHeight - imgHeight * scale) / 2;
   
-      // Calculate dimensions of the image in the PDF
-      const scaledImgWidth = imgWidth * scale;
-      const scaledImgHeight = imgHeight * scale;
-  
-      // Center the image if there's any remaining space
-      const imgX = (pdfWidth - scaledImgWidth) / 2;
-      const imgY = (pdfHeight - scaledImgHeight) / 2;
-  
-      pdf.addImage(
-        imgData,
-        "JPEG",
-        imgX,
-        imgY,
-        scaledImgWidth,
-        scaledImgHeight
-      );
-  
+      const imgData = canvas.toDataURL("image/jpeg", 1.0);
+      pdf.addImage(imgData, "JPEG", x, y, imgWidth * scale, imgHeight * scale);
       pdf.save("application_details.pdf");
-    } else {
-      console.error("PDF content not ready");
     }
   };
   return (
     <div
       id="ModelContainer"
-      className="fixed inset-0 z-[200] flex h-[200vh] items-center justify-center overflow-y-scroll bg-black bg-opacity-20 backdrop-blur-sm"
+      className="fixed inset-0 z-[200] flex h-[540mm] w-full items-center shadow-2xl justify-center overflow-y-scroll bg-white/20 backdrop-blur-sm"
     >
-      <div className="top-80 h-[200vh] w-3/4 border-e-emerald-600 bg-white p-2 py-5 shadow-inner md:w-1/2">
+      <div className="h-full border-e-emerald-600 bg-white p-2 py-5 bg-white shadow-inner w-2/4">
         <div
           ref={pdfContentRef}
-          className="relative h-[230vh] w-3/4 items-center justify-center 2xsm:w-full xsm:w-full md:w-full"
+          className="relative w-[210mm] h-[620mm] items-center bg-white justify-center 2xsm:w-full xsm:w-full md:w-full"
+          style={{ boxSizing: 'border-box' }}
         >
-          <div className="jusitfy-between flex gap-56 p-6">
-            <div className="flex flex-col px-4">
-              <a className="text-2xl font-bold text-black underline">
+          <div className="jusitfy-between bg-white flex gap-56 p-3 items-start w-full ">
+            <div className="flex flex-col px-4 gap-2 bg-white">
+              <a className="text-2xl font-bold text-blue-600">
                 Application Details
               </a>
+              <div className="flex">
               <a className="text-xl font-bold text-black">
                 Application Number:
               </a>
-              <span></span>
+              <span className="my-1 text-black text-md">{app_no}</span>
+              </div>
               <div className="flex">
                 <a className="inline-flex text-xl font-bold text-black">
                   Engineer:
@@ -139,25 +132,24 @@ const Individual = () => {
                   value="Naveen"
                   name="Engineer name"
                   disabled
-                  className="bg-transparent px-4 text-black"
+                  className="bg-transparent px-2 text-black text-lg"
                 />
               </div>
             </div>
-            <div className="justiyf-start flex flex-col gap-2">
+            <div className="flex flex-col gap-2 justify-right items-end bg-white">
               <Image src={headerLogo} width={300} height={0} alt="Header" />
               <img
-                className="h-auto w-[100%]"
+                className="h-auto w-[50%]"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_HKLxlwH7VAJzZLN-BFB11PQVhpw9aafoMAEbCzIAn7xvXIKGzqcbctsDlteeaYXsQ&usqp=CAU"
                 alt="logo"
               />
             </div>
           </div>
-          <hr />
-          <div className="flex items-center justify-center">
-            <a className="text-xl font-bold text-black">Customer Info</a>
+          <div className="flex items-center justify-center py-2">
+            <a className="text-xl font-bold text-white bg-blue-600 flex w-full justify-center items-center cursor-pointer p-1">Customer Info</a>
           </div>
-          <div className="flex justify-around py-2">
-            <div className="flex flex-col items-center gap-2 ">
+          <div className="flex justify-around py-2  bg-white">
+            <div className="flex flex-col items-center gap-2">
               <a className="text-lg font-bold text-black">Company Name</a>
               <input
                 type="text"
@@ -197,11 +189,10 @@ const Individual = () => {
               />
             </div>
           </div>
-          <hr />
-          <div className="flex items-center justify-center">
-            <a className="py-1 text-xl font-bold text-black">Drive Details</a>
+          <div className="flex items-center justify-center py-2">
+            <a className="text-xl font-bold text-white bg-blue-600 w-full flex justify-center items-center p-1">Drive Details</a>
           </div>
-          <div className="flex justify-around py-2">
+          <div className="flex justify-around py-2  bg-white">
             <div className="flex flex-col items-center gap-2 ">
               <a className="text-lg font-bold text-black">Drive Type</a>
               <input
@@ -243,12 +234,12 @@ const Individual = () => {
               />
             </div>
           </div>
-          <hr />
-          <div className="flex items-center justify-center">
-            <a className="py-1 text-xl font-bold text-black">Work Details</a>
+          <div className="flex items-center justify-center py-2">
+            <a className="text-xl font-bold text-white bg-blue-600 flex justify-center items-center w-full p-1">Work Details</a>
           </div>
+          <div className=" bg-white">
           <div className="flex justify-around py-2">
-            <div className="flex flex-col items-center gap-2 ">
+            <div className="flex flex-col items-center gap-2">
               <a className="text-lg font-bold text-black">Work Taken</a>
               <textarea
                 value="Work Taken..."
@@ -258,7 +249,7 @@ const Individual = () => {
               />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Service Type</a>
+              <a className="text-lg font-bold text-black ">Service Type</a>
               <input
                 type="text"
                 value="New Drive Install"
@@ -277,14 +268,15 @@ const Individual = () => {
                 className="rounded bg-transparent p-1 text-center text-black"
               />
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Taken for Office</a>
-              <input
-                type="text"
-                value="Yes"
-                name="Taken for Office"
+            <div className="flex flex-col items-center justify-center gap-2">
+              <a className="text-lg font-bold text-black">
+                Alarm & Error Faced by Customer
+              </a>
+              <textarea
+                value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus"
+                name="Alarm & Error Faced by Customer"
                 disabled
-                className="rounded bg-transparent p-1 text-center text-black"
+                className="rounded bg-transparent h-20 w-60 text-center text-black"
               />
             </div>
           </div>
@@ -299,24 +291,24 @@ const Individual = () => {
                 className="rounded bg-transparent p-1 text-center text-black"
               />
             </div>
-            <div className="flex flex-col items-center justify-center gap-2">
-              <a className="text-lg font-bold text-black">
-                Alarm & Error Faced by Customer
-              </a>
-              <textarea
-                value="Alarm & Error Faced by Customer"
-                name="Alarm & Error Faced by Customer"
+            <div className="flex flex-col items-center gap-2">
+              <a className="text-lg font-bold text-black">Taken for Office</a>
+              <input
+                type="text"
+                value="Yes"
+                name="Taken for Office"
                 disabled
                 className="rounded bg-transparent p-1 text-center text-black"
               />
             </div>
           </div>
-          <hr />
-          <div className="flex items-center justify-center">
-            <a className="py-1 text-xl font-bold text-black">
+          </div>
+          <div className="flex items-center justify-center py-2">
+            <a className="flex w-full justify-center items-center text-xl font-bold text-white bg-blue-600 p-2 ">
               Service work Details
             </a>
           </div>
+          <div className=" bg-white">
           <div className="flex justify-around py-2">
             <div className="flex flex-col items-center gap-2 ">
               <a className="text-lg font-bold text-black">Issue Faced</a>
@@ -338,20 +330,20 @@ const Individual = () => {
               />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Work Status</a>
+              <a className="text-lg font-bold text-black">Type</a>
               <input
                 type="text"
-                value="No"
+                value="Servicable"
                 name="Work Status"
                 disabled
                 className="rounded bg-transparent p-1 text-center text-black"
               />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Taken for Office</a>
+              <a className="text-lg font-bold text-black">Complete Date</a>
               <input
                 type="text"
-                value="Yes"
+                value="31/07/2024"
                 name="Taken for Office"
                 disabled
                 className="rounded bg-transparent p-1 text-center text-black"
@@ -359,22 +351,22 @@ const Individual = () => {
             </div>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <a className="text-lg font-bold text-black">Check In Date</a>
-            <input
-              type="text"
-              value="31/07/2024"
-              name="Check In Date"
-              disabled
-              className="rounded bg-transparent p-1 text-center text-black"
-            />
+            <a className="text-lg font-bold text-black">Materials Required</a>
+            <ul className="flex justify-around gap-20">
+              <li className="list-disc text-black">Add</li>
+              <li className="list-disc text-black">Add</li>
+              <li className="list-disc text-black">Add</li>
+              <li className="list-disc text-black">Add</li>
+              <li className="list-disc text-black">Add</li>
+            </ul>
           </div>
-          <hr />
-          <div className="flex items-center justify-center">
-            <a className="py-1 text-xl font-bold text-black">
+          </div>
+          <div className="flex items-center justify-center py-2">
+            <a className="text-xl font-bold text-white bg-blue-600 flex w-full justify-center items-center p-2">
               Customer Feedback
             </a>
           </div>
-          <div className="flex justify-around py-2">
+          <div className="flex justify-around py-2 bg-white">
             <div className="flex flex-col items-center gap-2 ">
               <a className="text-lg font-bold text-black">About the Company</a>
               <div className="flex gap-1">
@@ -428,8 +420,7 @@ const Individual = () => {
               </div>
             </div>
           </div>
-          <hr />
-          <div className="flex flex-col items-center justify-around p-2">
+          <div className="flex flex-col items-center justify-around p-2 bg-white">
             <div className="flex items-center justify-between gap-30">
               <a className="text-md pb-2 font-bold text-black">Drive Image</a>
               <a className="text-md pb-2 font-bold text-black">Alarm Image</a>
@@ -445,7 +436,7 @@ const Individual = () => {
           </div>
           <hr />
         </div>
-        <div className="fixed right-[900px] top-[1200px] z-[1000]">
+        <div className="fixed right-[900px] top-[1240px] z-[1000]">
             <div className="flex items-center justify-center">
               <button
                 onClick={generatePDF}
@@ -462,3 +453,5 @@ const Individual = () => {
 };
 
 export default Individual;
+jsVectorMap
+PiPawPrintLight

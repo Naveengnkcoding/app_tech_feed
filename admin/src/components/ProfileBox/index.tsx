@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "../Footer/Footer";
+// import Footer from "../Footer/Footer";
 
 const ProfileBox = () => {
   return (
@@ -132,14 +132,14 @@ const ProfileBox = () => {
               </p>
             </div>
 
-            <div className="mt-4.5">
+            {/* <div className="mt-4.5">
               <h4 className="mb-3.5 font-medium text-dark dark:text-white">
                 Devolped by
               </h4>
               <div className="flex items-center justify-center gap-3.5">
                 <Footer />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

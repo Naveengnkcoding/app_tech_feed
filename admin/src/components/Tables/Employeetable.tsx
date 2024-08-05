@@ -16,7 +16,7 @@ const Employeetable = () => {
   return (
     <div>
       <div className="relative w-full max-w-screen-2xl lg:px-4">
-        <div className="overflow-hidden bg-white shadow-lg dark:bg-gray-800 sm:rounded-lg">
+        <div className="overflow-hidden bg-white dark:bg-gray-800 sm:rounded-lg">
           <div className="flex flex-1 items-center space-x-2">
             {/* <h5>
                   <span className="text-gray-500">All Products:</span>
@@ -73,7 +73,7 @@ const Employeetable = () => {
                   Table settings
                 </button>
               </div> */}
-          <div className="mx-4 flex flex-col items-stretch justify-between space-y-3 border-t py-4 dark:border-gray-700 md:flex-row md:items-center md:space-x-3 md:space-y-0">
+          <div className="mx-4 flex flex-col items-stretch justify-between space-y-3 py-2 dark:border-gray-700 md:flex-row md:items-center md:space-x-3 md:space-y-0">
             <div className="w-full md:w-1/2">
               {/* <form className="flex items-center">
                   <label className="sr-only">Search</label>
