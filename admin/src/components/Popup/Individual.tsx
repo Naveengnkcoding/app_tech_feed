@@ -104,7 +104,7 @@ const Individual = () => {
   return (
     <div
       id="ModelContainer"
-      className="fixed inset-0 z-[200] flex h-[540mm] w-full items-center shadow-2xl justify-center overflow-y-scroll bg-white/20 backdrop-blur-sm"
+      className="fixed inset-0 z-[200] flex h-[540mm] w-full items-center shadow-2xl justify-center overflow-y-scroll bg-white/40 backdrop-blur-md"
     >
       <div className="h-full border-e-emerald-600 bg-white p-2 py-5 bg-white shadow-inner w-2/4">
         <div
@@ -138,8 +138,8 @@ const Individual = () => {
             </div>
             <div className="flex flex-col gap-2 justify-right items-end bg-white">
               <Image src={headerLogo} width={300} height={0} alt="Header" />
-              <Image
-                width={300} height={100}
+              <img
+                className="w-[50%] h-0"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_HKLxlwH7VAJzZLN-BFB11PQVhpw9aafoMAEbCzIAn7xvXIKGzqcbctsDlteeaYXsQ&usqp=CAU"
                 alt="logo"
               />
