@@ -138,8 +138,8 @@ const Individual = () => {
             </div>
             <div className="flex flex-col gap-2 justify-right items-end bg-white">
               <Image src={headerLogo} width={300} height={0} alt="Header" />
-              <img
-                className="h-auto w-[50%]"
+              <Image
+                width={300} height={100}
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_HKLxlwH7VAJzZLN-BFB11PQVhpw9aafoMAEbCzIAn7xvXIKGzqcbctsDlteeaYXsQ&usqp=CAU"
                 alt="logo"
               />
@@ -453,5 +453,3 @@ const Individual = () => {
 };
 
 export default Individual;
-jsVectorMap
-PiPawPrintLight

@@ -11,19 +11,19 @@ const Employeerow = ({ row }: { row: any }) => {
           scope="row"
           className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 dark:text-white"
         >
-          <div className="px-4">{row.empname}</div>
+          <div className="px-6">{row.empname}</div>
         </th>
-        <td className="px-4 py-2">
+        <td className="px-6 py-2">
           <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300 rounded px-2 py-0.5 text-xs font-medium">
             {row.desg}
           </span>
         </td>
-        <td className="whitespace-nowrap px-7 py-2 font-medium text-gray-900 dark:text-white">
+        <td className="whitespace-nowrap px-8 py-2 font-medium text-gray-900 dark:text-white">
           <div className="flex items-center">
             {row.phno}
           </div>
         </td>
-        <td className="whitespace-nowrap px-10 py-2 font-medium text-gray-900 dark:text-white">
+        <td className="whitespace-nowrap px-12 py-2 font-medium text-gray-900 dark:text-white">
           {row.bg}
         </td>
         <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 dark:text-white">
