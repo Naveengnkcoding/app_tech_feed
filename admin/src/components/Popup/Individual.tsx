@@ -103,12 +103,12 @@ const Individual = () => {
   return (
     <div
       id="ModelContainer"
-      className="fixed inset-0 z-[200] flex w-full  items-center border-2 border-black justify-center overflow-y-scroll bg-white/40 shadow-2xl backdrop-blur-md"
+      className="fixed inset-0 z-[200] flex w-full items-center justify-center overflow-y-scroll bg-white/40  backdrop-blur-md"
     >
-      <div className="h-3/4 w-3/4 bg-white bg-white p-2 py-5 shadow-inner">
+      <div className="h-[297mm] w-3/4 bg-white bg-white p-2 py-5 ">
         <div
           ref={pdfContentRef}
-          className="relative h-[540mm] w-[210mm] items-center justify-center bg-white 2xsm:w-full xsm:w-full md:w-full"
+          className="relative h-[540mm] w-3/4 items-center justify-center bg-white 2xsm:w-full xsm:w-full md:w-full"
           style={{ boxSizing: "border-box" }}
         >
           <div className="flex justify-between w-full items-start bg-white p-4">
@@ -131,7 +131,7 @@ const Individual = () => {
                   value="Naveen"
                   name="Engineer name"
                   disabled
-                  className="bg-transparent px-2 text-lg text-black"
+                  className="bg-white px-2 text-lg text-black"
                 />
               </div>
             </div>
@@ -145,7 +145,7 @@ const Individual = () => {
             </div>
           </div>
           <div className="flex items-center justify-center py-2">
-            <a className="flex w-full cursor-pointer items-center justify-center bg-blue-700 p-1 text-xl font-bold text-white">
+            <a className="flex w-full cursor-pointer items-center justify-center bg-blue-700  text-xl font-bold text-white">
               Customer Info
             </a>
           </div>
@@ -157,7 +157,7 @@ const Individual = () => {
                 value="Yaskawa"
                 name="Company Name"
                 disabled
-                className=" rounded bg-transparent p-1 text-center text-black"
+                className="rounded bg-white  text-center text-black"
               />
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -167,7 +167,7 @@ const Individual = () => {
                 value="Customer"
                 name="Customer Name"
                 disabled
-                className=" rounded bg-transparent p-1 text-center text-black"
+                className=" rounded bg-white  text-center text-black"
               />
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -176,7 +176,7 @@ const Individual = () => {
                 value="Address"
                 name="Address"
                 disabled
-                className=" h-9 rounded bg-transparent p-1 text-center text-black"
+                className=" h-9 rounded bg-white  text-center text-black"
               />
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -186,12 +186,12 @@ const Individual = () => {
                 value="GSTIN9072814"
                 name="GST No"
                 disabled
-                className=" rounded bg-transparent p-1 text-center text-black"
+                className=" rounded bg-white  text-center text-black"
               />
             </div>
           </div>
           <div className="flex items-center justify-center py-2">
-            <a className="flex w-full items-center justify-center bg-blue-700 p-1 text-xl font-bold text-white">
+            <a className="flex w-full items-center justify-center bg-blue-700  text-xl font-bold text-white">
               Drive Details
             </a>
           </div>
@@ -203,7 +203,7 @@ const Individual = () => {
                 value="Yaskawa Drive"
                 name="Drive Type"
                 disabled
-                className=" rounded bg-transparent p-1 text-center text-black"
+                className=" rounded bg-white  text-center text-black"
               />
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -213,7 +213,7 @@ const Individual = () => {
                 value="Drive Model"
                 name="Model"
                 disabled
-                className=" rounded bg-transparent p-1 text-center text-black"
+                className=" rounded bg-white  text-center text-black"
               />
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -223,7 +223,7 @@ const Individual = () => {
                 value="0.75KW"
                 name="KW"
                 disabled
-                className="rounded bg-transparent p-1 text-center text-black"
+                className="rounded bg-white  text-center text-black"
               />
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -233,12 +233,12 @@ const Individual = () => {
                 value="AMPS"
                 name="AMPS"
                 disabled
-                className=" rounded bg-transparent p-1 text-center text-black"
+                className=" rounded bg-white  text-center text-black"
               />
             </div>
           </div>
           <div className="flex items-center justify-center py-2">
-            <a className="flex w-full items-center justify-center bg-blue-700 p-1 text-xl font-bold text-white">
+            <a className="flex w-full items-center justify-center bg-blue-700  text-xl font-bold text-white">
               Work Details
             </a>
           </div>
@@ -264,7 +264,7 @@ const Individual = () => {
                       value="New Drive Install"
                       name="service type"
                       disabled
-                      className="bg-none p-1 text-center text-black"
+                      className="bg-none  text-center text-black"
                     />
                   </div>
                   <div className="flex flex-col">
@@ -276,7 +276,7 @@ const Individual = () => {
                       value="No"
                       name="Work Status"
                       disabled
-                      className="bg-none p-1 text-center text-black"
+                      className="bg-none  text-center text-black"
                     />
                   </div>
                 </div>
@@ -290,7 +290,7 @@ const Individual = () => {
                       value="Yes"
                       name="Taken for office"
                       disabled
-                      className="bg-none p-1 text-center text-black"
+                      className="bg-none  text-center text-black"
                     />
                   </div>
                   <div className="flex flex-col">
@@ -302,7 +302,7 @@ const Individual = () => {
                       value="30/07/2024"
                       name="Check In Date"
                       disabled
-                      className="bg-none p-1 text-center text-black"
+                      className="bg-none  text-center text-black"
                     />
                   </div>
                 </div>
@@ -319,12 +319,12 @@ const Individual = () => {
             </div>
           </div>
           <div className="flex items-center justify-center py-2">
-            <a className="flex w-full items-center justify-center bg-blue-700 p-1 text-xl font-bold text-white">
+            <a className="flex w-full items-center justify-center bg-blue-700  text-xl font-bold text-white">
               Service Work Details
             </a>
           </div>
           <div className="bg-white">
-            <div className="flex jusitfy-around ">
+            <div className="flex justify-around">
               <div className="flex flex-col">
                 <a className="text-md text-center font-bold text-black">
                   Issue Faced
@@ -343,7 +343,7 @@ const Individual = () => {
                     <input
                       value="30/07/2024"
                       name="Process Date"
-                      className="bg-none p-1 text-center text-black"
+                      className="bg-none  text-center text-black"
                       disabled
                     />
                   </div>
@@ -354,7 +354,7 @@ const Individual = () => {
                     <input
                       value="Servicable"
                       name="Type"
-                      className="bg-none p-1 text-center text-black"
+                      className="bg-none  text-center text-black"
                       disabled
                     />
                   </div>
@@ -365,7 +365,7 @@ const Individual = () => {
                     <input
                       value="30/07/2024"
                       name="Complete Date"
-                      className="bg-none p-1 text-center text-black"
+                      className="bg-none  text-center text-black"
                       disabled
                     />
                   </div>
@@ -388,60 +388,60 @@ const Individual = () => {
             </div>
           </div>
           <div className="flex items-center justify-center py-2">
-            <a className="flex w-full items-center justify-center bg-blue-700 p-1 text-xl font-bold text-white">
+            <a className="flex w-full items-center justify-center bg-blue-700 text-xl font-bold text-white">
               Customer Feedback
             </a>
           </div>
           <div className="flex justify-around bg-white py-2">
             <div className="flex flex-col items-center gap-2 ">
               <a className="text-lg font-bold text-black">About the Company</a>
-              <div className="flex gap-1">
+              <div className="flex ga">
                 <TiStarFullOutline fill="#FFD700" size={32} />
                 <input
                   type="tel"
                   value="4.5"
                   name="About the company"
                   disabled
-                  className="w-8 rounded bg-transparent p-1 text-center text-black"
+                  className="w-8 rounded bg-white  text-center text-black"
                 />
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <a className="text-lg font-bold text-black">About the Engineer</a>
-              <div className="flex gap-1">
+              <div className="flex ga">
                 <TiStarFullOutline fill="#FFD700" size={32} />
                 <input
                   type="tel"
                   value="4.5"
                   name="About the Engineer"
                   disabled
-                  className="w-8 rounded bg-transparent p-1 text-center text-black"
+                  className="w-8 rounded bg-white  text-center text-black"
                 />
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <a className="text-lg font-bold text-black">About the Work</a>
-              <div className="flex gap-1">
+              <div className="flex ga">
                 <TiStarFullOutline fill="#FFD700" size={32} />
                 <input
                   type="tel"
                   value="4.5"
                   name="About the Work"
                   disabled
-                  className="w-8 rounded bg-transparent p-1 text-center text-black"
+                  className="w-8 rounded bg-white  text-center text-black"
                 />
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <a className="text-lg font-bold text-black">Star Rating</a>
-              <div className="flex gap-1">
+              <div className="flex ga">
                 <TiStarFullOutline fill="#FFD700" size={32} />
                 <input
                   type="tel"
                   value="4.5"
                   name="Star Rating"
                   disabled
-                  className="w-8 rounded bg-transparent p-1 text-center text-black"
+                  className="w-8 rounded bg-white  text-center text-black"
                 />
               </div>
             </div>
@@ -477,7 +477,7 @@ const Individual = () => {
           </div>
           <hr />
         </div>
-        <div className="fixed right-[1000px] top-[1340px] z-[1000]">
+        <div className="fixed right-[1050px] top-[1200px] z-[1000]">
           <div className="flex items-center justify-center">
             <button
               onClick={generatePDF}
