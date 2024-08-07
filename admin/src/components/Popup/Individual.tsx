@@ -5,12 +5,12 @@ import { TiStarFullOutline } from "react-icons/ti";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 import { FaJarWheat } from "react-icons/fa6";
-import jsVectorMap from "jsvectormap";
 import { PiPawPrintLight } from "react-icons/pi";
 
 const placeholderImg = "https://via.placeholder.com/200x100?text=Loading...";
 const headerLogo = "/images/logo/header_logo.png";
 const app_no = 22039170323;
+const engName = "Naveen";
 
 interface ImageUrls {
   driveImg: string;
@@ -77,9 +77,6 @@ const Individual = () => {
         format: "a4",
       });
 
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = pdf.internal.pageSize.getHeight();
-
       const canvas = await html2canvas(content, {
         scale: 2,
         useCORS: true,
@@ -87,407 +84,344 @@ const Individual = () => {
         scrollY: -window.scrollY,
       });
 
-      const imgWidth = canvas.width;
-      const imgHeight = canvas.height;
-
-      const scale = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-
-      const x = (pdfWidth - imgWidth * scale) / 2;
-      const y = (pdfHeight - imgHeight * scale) / 2;
-
       const imgData = canvas.toDataURL("image/jpeg", 1.0);
-      pdf.addImage(imgData, "JPEG", x, y, imgWidth * scale, imgHeight * scale);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+
+      pdf.addImage(imgData, "JPEG", 0, 0, pdfWidth, pdfHeight);
       pdf.save("application_details.pdf");
     }
   };
+
   return (
-    <div
-      id="ModelContainer"
-      className="fixed inset-0 z-[200] flex w-full items-center justify-center overflow-y-scroll bg-white/40  backdrop-blur-md"
-    >
-      <div className="h-[297mm] w-3/4 bg-white bg-white p-2 py-5 ">
+    <div id="ModelContainer" className="fixed inset-0 z-[200] flex items-center justify-center overflow-y-auto bg-white/40 backdrop-blur-md">
+      <div
+        className="bg-white shadow-lg"
+        style={{ width: "210mm", height: "297mm", position: "relative" }}
+      >
         <div
           ref={pdfContentRef}
-          className="relative h-[540mm] w-3/4 items-center justify-center bg-white 2xsm:w-full xsm:w-full md:w-full"
-          style={{ boxSizing: "border-box" }}
+          className="relative flex flex-col items-center border-2 border-black bg-white p-8 shadow-md"
+          style={{ width: "100%", height: "100%" }}
         >
-          <div className="flex justify-between w-full items-start bg-white p-4">
-            <div className="flex flex-col gap-2 bg-white px-4">
-              <a className="text-2xl font-bold text-blue-700">
+          <div className="flex w-full justify-between gap-10 pb-2">
+            <div className="flex flex-col gap-2">
+              <a className="text-2xl font-bold text-blue-600">
                 Application Details
               </a>
               <div className="flex items-center gap-2">
-                <a className="text-lg font-bold text-black">
-                  Application Number:
+                <a className="flex text-lg font-bold text-black">
+                  Application&nbsp;Number
                 </a>
-                <span className="text-md text-black">{app_no}</span>
+                <span>{app_no}</span>
               </div>
-              <div className="flex">
-                <a className="inline-flex text-lg font-bold text-black">
-                  Engineer:
-                </a>
-                <input
-                  type="text"
-                  value="Naveen"
-                  name="Engineer name"
-                  disabled
-                  className="bg-white px-2 text-lg text-black"
-                />
+              <div className="flex items-center gap-2">
+                <a className="text-lg font-bold text-black">Engineer Name</a>
+                <span>{engName}</span>
               </div>
             </div>
-            <div className=" flex flex-col gap-2 bg-white">
-              <Image src={headerLogo} width={300} height={0} alt="Header" />
+            <div className="flex flex-col items-end">
+              <Image src={headerLogo} width={300} height={150} alt="header" />
               <img
-                className="h-auto w-[50%]"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_HKLxlwH7VAJzZLN-BFB11PQVhpw9aafoMAEbCzIAn7xvXIKGzqcbctsDlteeaYXsQ&usqp=CAU"
-                alt="logo"
-              />
+                className="h-auto w-[50%]"
+              ></img>
             </div>
           </div>
-          <div className="flex items-center justify-center py-2">
-            <a className="flex w-full cursor-pointer items-center justify-center bg-blue-700  text-xl font-bold text-white">
+          <div className="flex w-full items-center justify-center bg-blue-600">
+            <a className="w -full text-md flex items-center justify-center bg-blue-600 p-1 font-bold text-white">
               Customer Info
             </a>
           </div>
-          <div className="flex justify-around bg-white  py-2">
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Company Name</a>
+          <div className="flex items-center justify-around py-2">
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">Company Name</a>
               <input
                 type="text"
                 value="Yaskawa"
                 name="Company Name"
                 disabled
-                className="rounded bg-white  text-center text-black"
+                className="bg-none text-center text-black"
               />
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Customer Name</a>
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">Customer Name</a>
               <input
                 type="text"
-                value="Customer"
+                value="Naveen"
                 name="Customer Name"
                 disabled
-                className=" rounded bg-white  text-center text-black"
+                className="bg-none text-center text-black"
               />
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Address</a>
-              <textarea
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">Address</a>
+              <input
+                type="text"
                 value="Address"
                 name="Address"
                 disabled
-                className=" h-9 rounded bg-white  text-center text-black"
+                className="bg-none text-center text-black"
               />
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">GST No</a>
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">GST No</a>
               <input
                 type="text"
-                value="GSTIN9072814"
+                value="GSTIN424920942"
                 name="GST No"
                 disabled
-                className=" rounded bg-white  text-center text-black"
+                className="bg-none text-center text-black"
               />
             </div>
           </div>
-          <div className="flex items-center justify-center py-2">
-            <a className="flex w-full items-center justify-center bg-blue-700  text-xl font-bold text-white">
+          <div className="flex w-full items-center justify-center bg-blue-600">
+            <a className="w -full text-md flex items-center justify-center bg-blue-600 p-1 font-bold text-white">
               Drive Details
             </a>
           </div>
-          <div className="flex justify-around bg-white  py-2">
-            <div className="flex flex-col items-center gap-2 ">
-              <a className="text-lg font-bold text-black">Drive Type</a>
+          <div className="flex items-center justify-around py-2">
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">Drive Type</a>
               <input
                 type="text"
                 value="Yaskawa Drive"
                 name="Drive Type"
                 disabled
-                className=" rounded bg-white  text-center text-black"
+                className="bg-none text-center text-black"
               />
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Model</a>
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">Model</a>
               <input
                 type="text"
                 value="Drive Model"
                 name="Model"
                 disabled
-                className=" rounded bg-white  text-center text-black"
+                className="bg-none text-center text-black"
               />
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">KW</a>
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">KW</a>
               <input
                 type="tel"
-                value="0.75KW"
+                value="0.75"
                 name="KW"
                 disabled
-                className="rounded bg-white  text-center text-black"
+                className="bg-none text-center text-black"
               />
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">AMPS</a>
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">AMPS</a>
               <input
                 type="tel"
-                value="AMPS"
+                value="Amps"
                 name="AMPS"
                 disabled
-                className=" rounded bg-white  text-center text-black"
+                className="bg-none text-center text-black"
               />
             </div>
           </div>
-          <div className="flex items-center justify-center py-2">
-            <a className="flex w-full items-center justify-center bg-blue-700  text-xl font-bold text-white">
+          <div className="flex w-full items-center justify-center bg-blue-600">
+            <a className="w -full text-md flex items-center justify-center bg-blue-600 p-1 font-bold text-white">
               Work Details
             </a>
           </div>
-          <div className="bg-white">
-            <div className="flex justify-around py-2">
-              <div className="flex flex-col gap-2">
-                <a className="text-md text-center font-bold text-black">
-                  Work Taken
-                </a>
-                <textarea
-                  className="h-30 w-60 bg-none text-center text-black"
-                  value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit debitis nostrum distinctio, incidunt, quia expedita dolor officia aperiam maxime"
-                />
-              </div>
-              <div className="flex flex-col gap-6">
-                <div className="flex">
-                  <div className="flex flex-col">
-                    <a className="text-md text-center font-bold text-black">
-                      Service Type
-                    </a>
-                    <input
-                      type="text"
-                      value="New Drive Install"
-                      name="service type"
-                      disabled
-                      className="bg-none  text-center text-black"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <a className="text-md text-center font-bold text-black">
-                      Work Status
-                    </a>
-                    <input
-                      type="text"
-                      value="No"
-                      name="Work Status"
-                      disabled
-                      className="bg-none  text-center text-black"
-                    />
-                  </div>
+          <div className="flex justify-around items-center py-2">
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">Work Taken</a>
+              <textarea
+                value="Content"
+                name="Work Taken"
+                disabled
+                className="h-30 w-40 bg-none text-center text-black"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <div className="flex">
+                <div className="flex flex-col items-center justify-center">
+                  <a className="text-md font-bold text-black">Service Type</a>
+                  <input
+                    value="New Drive Install"
+                    name="Service Type"
+                    className="bg-none text-center text-black"
+                  />
                 </div>
-                <div className="flex">
-                  <div className="flex flex-col">
-                    <a className="text-md text-center font-bold text-black">
-                      Taken for Office
-                    </a>
-                    <input
-                      type="text"
-                      value="Yes"
-                      name="Taken for office"
-                      disabled
-                      className="bg-none  text-center text-black"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <a className="text-md text-center font-bold text-black">
-                      Check In Date
-                    </a>
-                    <input
-                      type="text"
-                      value="30/07/2024"
-                      name="Check In Date"
-                      disabled
-                      className="bg-none  text-center text-black"
-                    />
-                  </div>
+                <div className="flex flex-col items-center justify-center">
+                  <a className="text-md font-bold text-black">Work Status</a>
+                  <input
+                    value="No"
+                    name="Work Status"
+                    className="bg-none text-center text-black"
+                  />
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <a className="text-md text-center font-bold text-black">
-                  Alarm & Error Faced By Customer
-                </a>
-                <textarea
-                  className="h-30 w-60 bg-none text-center text-black"
-                  value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit debitis nostrum distinctio, incidunt, quia expedita dolor officia aperiam maxime"
-                />
+              <div className="flex">
+                <div className="flex flex-col items-center justify-center">
+                  <a className="text-md font-bold text-black">
+                    Taken for Office
+                  </a>
+                  <input
+                    value="Yes"
+                    name="Taken for Office"
+                    className="bg-none text-center text-black"
+                  />
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                  <a className="text-md font-bold text-black">Check In Date</a>
+                  <input
+                    value="30/07/2024"
+                    name="Check In Date"
+                    className="bg-none text-center text-black"
+                  />
+                </div>
               </div>
             </div>
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">
+                Alarm Error Faced
+              </a>
+              <textarea
+                value="Content"
+                name="Work Taken"
+                disabled
+                className="h-30 w-40 bg-none text-center text-black"
+              />
+            </div>
           </div>
-          <div className="flex items-center justify-center py-2">
-            <a className="flex w-full items-center justify-center bg-blue-700  text-xl font-bold text-white">
+          <div className="flex w-full items-center justify-center bg-blue-600">
+            <a className="w -full text-md flex items-center justify-center bg-blue-600 p-1 font-bold text-white">
               Service Work Details
             </a>
           </div>
-          <div className="bg-white">
-            <div className="flex justify-around">
-              <div className="flex flex-col">
-                <a className="text-md text-center font-bold text-black">
-                  Issue Faced
-                </a>
-                <textarea
-                  className="h-30 w-60 bg-none text-center text-black"
-                  value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit debitis nostrum distinctio, incidunt, quia expedita dolor officia aperiam maxime"
-                />
+          <div className="flex justify-around items-center">
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">Issues Faced</a>
+              <textarea
+                value="Content"
+                name="Work Taken"
+                disabled
+                className="h-30 w-60 bg-none text-center text-black"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <div className="flex">
+                <div className="flex flex-col justify-center items-center">
+                  <a className="text-md font-bold text-black">Process Date</a>
+                  <input value="30/07/2024" name="Process Date" disabled className="text-center text-center bg-none"/>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <a className="text-md font-bold text-black">Type</a>
+                  <input value="Servicable" name="Type" disabled className="text-center text-center bg-none"/>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <a className="text-md font-bold text-black">Complete Date</a>
+                  <input value="30/07/2024" name="Complete Date" disabled className="text-center text-center bg-none"/>
+                </div>
               </div>
-              <div className="flex flex-col gap-4">
-                <div className="flex">
-                  <div className="flex flex-col">
-                    <a className="text-md text-center font-bold text-black">
-                      Process Date
-                    </a>
-                    <input
-                      value="30/07/2024"
-                      name="Process Date"
-                      className="bg-none  text-center text-black"
-                      disabled
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <a className="text-md text-center font-bold text-black">
-                      Type
-                    </a>
-                    <input
-                      value="Servicable"
-                      name="Type"
-                      className="bg-none  text-center text-black"
-                      disabled
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <a className="text-md text-center font-bold text-black">
-                      Complete Date
-                    </a>
-                    <input
-                      value="30/07/2024"
-                      name="Complete Date"
-                      className="bg-none  text-center text-black"
-                      disabled
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center justify-center">
-                  <div className="flex flex-col items-center justify-center">
-                    <a className="text-md font-bold text-black">
-                      Materials Replaced
-                    </a>
-                    <ul className="flex gap-20">
-                      <li className="list-disc text-black">Add</li>
-                      <li className="list-disc text-black">Add</li>
-                      <li className="list-disc text-black">Add</li>
-                      <li className="list-disc text-black">Add</li>
-                      <li className="list-disc text-black">Add</li>
-                    </ul>
-                  </div>
-                </div>
+              <div className="flex flex-col justify-center items-center">
+              <a className="text-md font-bold text-black">Materials Replaced</a>
+                <ul className="flex gap-20">
+                  <li className="list-disc text-black">Add</li>
+                  <li className="list-disc text-black">Add</li>
+                  <li className="list-disc text-black">Add</li>
+                  <li className="list-disc text-black">Add</li>
+                  <li className="list-disc text-black">Add</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center py-2">
-            <a className="flex w-full items-center justify-center bg-blue-700 text-xl font-bold text-white">
+          <div className="flex w-full items-center justify-center bg-blue-600">
+            <a className="w -full text-md flex items-center justify-center bg-blue-600 p-1 font-bold text-white">
               Customer Feedback
             </a>
           </div>
-          <div className="flex justify-around bg-white py-2">
-            <div className="flex flex-col items-center gap-2 ">
-              <a className="text-lg font-bold text-black">About the Company</a>
-              <div className="flex ga">
-                <TiStarFullOutline fill="#FFD700" size={32} />
+          <div className="flex items-center justify-around gap-10 py-2">
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">About the Company</a>
+              <div className="flex">
+                <TiStarFullOutline size={20} fill="#FFD700"/>
                 <input
-                  type="tel"
-                  value="4.5"
-                  name="About the company"
-                  disabled
-                  className="w-8 rounded bg-white  text-center text-black"
-                />
+                type="tel"
+                value="4.5"
+                name="About the Company"
+                disabled
+                className="bg-none text-center w-10 text-black"
+              />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">About the Engineer</a>
-              <div className="flex ga">
-                <TiStarFullOutline fill="#FFD700" size={32} />
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">About the Engineer</a>
+              <div className="flex">
+                <TiStarFullOutline size={20} fill="#FFD700"/>
                 <input
-                  type="tel"
-                  value="4.5"
-                  name="About the Engineer"
-                  disabled
-                  className="w-8 rounded bg-white  text-center text-black"
-                />
+                type="tel"
+                value="4.5"
+                name="About the Engineer"
+                disabled
+                className="bg-none text-center w-10 text-black"
+              />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">About the Work</a>
-              <div className="flex ga">
-                <TiStarFullOutline fill="#FFD700" size={32} />
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">About the Work</a>
+              <div className="flex">
+                <TiStarFullOutline size={20} fill="#FFD700"/>
                 <input
-                  type="tel"
-                  value="4.5"
-                  name="About the Work"
-                  disabled
-                  className="w-8 rounded bg-white  text-center text-black"
-                />
+                type="tel"
+                value="4.5"
+                name="About theWork"
+                disabled
+                className="bg-none text-center w-10 text-black"
+              />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a className="text-lg font-bold text-black">Star Rating</a>
-              <div className="flex ga">
-                <TiStarFullOutline fill="#FFD700" size={32} />
+            <div className="flex flex-col items-center justify-center">
+              <a className="text-md font-bold text-black">Star Rating</a>
+              <div className="flex">
+                <TiStarFullOutline size={20} fill="#FFD700"/>
                 <input
-                  type="tel"
-                  value="4.5"
-                  name="Star Rating"
-                  disabled
-                  className="w-8 rounded bg-white  text-center text-black"
-                />
+                type="tel"
+                value="4.5"
+                name="Star Rating"
+                disabled
+                className="bg-none text-center w-10 text-black"
+              />
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-around bg-white p-2">
-            <div className="flex items-center justify-between gap-30">
-              <a className="text-md pb-2 font-bold text-black">Drive Image</a>
-              <a className="text-md pb-2 font-bold text-black">Alarm Image</a>
-              <a className="text-md pb-2 font-bold text-black">Work Image</a>
-              <a className="text-md pb-2 font-bold text-black">E-Sign</a>
-            </div>
-            <div className="jusitfy-around flex gap-4">
-              <Image
-                src={images.driveImg}
-                width={200}
-                height={100}
-                alt="Driveimg"
-              />
-              <Image
-                src={images.alarmImg}
-                width={200}
-                height={100}
-                alt="alramimg"
-              />
-              <Image
-                src={images.workImg}
-                width={200}
-                height={100}
-                alt="workimg"
-              />
-              <Image src={images.eSign} width={200} height={100} alt="eSign" />
-            </div>
+          <div className="flex w-full items-center justify-center bg-blue-600">
+            <a className="w -full text-md flex items-center justify-center bg-blue-600 p-1 font-bold text-white">
+              Image Details
+            </a>
           </div>
-          <hr />
+          <div className="flex flex-col justify-center items-center py-2">
+            <div className="flex justify-around gap-20">
+              <div className="flex flex-col justify-center items-center">
+                <a className="text-md font-bold text-black">Drive Image</a>
+                <Image src={images.driveImg} width={150} height={75} alt="driveimage" />
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <a className="text-md font-bold text-black">Alarm Image</a>
+                <Image src={images.alarmImg} width={150} height={75} alt="alarmimage" />
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <a className="text-md font-bold text-black">Work Image</a>
+                <Image src={images.workImg} width={150} height={75} alt="workimage" />
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <a className="text-md font-bold text-black">eSign</a>
+                <Image src={images.eSign} width={150} height={75} alt="eSign" />
+              </div>
+              </div>
+            </div>
         </div>
-        <div className="fixed right-[1050px] top-[1200px] z-[1000]">
-          <div className="flex items-center justify-center">
-            <button
-              onClick={generatePDF}
-              disabled={!imagesLoaded}
-              className="flex items-center justify-center rounded bg-red-600 px-4 py-2 font-bold text-white"
-            >
-              {imagesLoaded ? "Generate" : "Loading Images..."}
-            </button>
-          </div>
-        </div>
+        <button
+          onClick={generatePDF}
+          className="no-print absolute bottom-20 right-90 rounded bg-red-600 px-4 py-2 font-bold text-white"
+        >
+          Generate
+        </button>
       </div>
     </div>
   );
