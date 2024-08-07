@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <Link href="#">
-      <p className = "text-sm text-gray-600 flex flex-wrap justify-center cursor-pointer"><span>&copy;Copyright&nbsp;</span>{currentYear},All rights reserved,<span className='font-bold'>Navgosoft</span>
+      <p className = "text-sm text-gray-600 flex flex-wrap justify-center cursor-pointer"><span>&copy;&nbsp;Copyright</span>&nbsp;{currentYear},All rights reserved,<span className='font-bold'>Navgosoft</span>
       </p>
       </Link>
     </footer>

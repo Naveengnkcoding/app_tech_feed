@@ -6,8 +6,12 @@ import { LuLogOut } from "react-icons/lu";
 import { BsTools } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "../Footer/Footer";
 import SidebarItem from "@/components/Sidebar/SidebarItem";
+import { TbLogout } from "react-icons/tb";
+import { RiLogoutBoxRLine } from "react-icons/ri";
 import DarkModeSwitcher from "../Header/DarkModeSwitcher";
+import { MdPhonelinkSetup } from "react-icons/md";
 import ClickOutside from "@/components/ClickOutside";
 import useLocalStorage from "@/hooks/useLocalStorage";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,22 +37,22 @@ const menuGroups = [
         route: "/dashboard",
       },
       {
-        icon: <BsTools size={24}/>,
+        icon: <MdPhonelinkSetup size={24}/>,
         label: "Applications",
         route: "/application",
       },
       {
-        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-person-fill-gear" viewBox="0 0 16 16">
-        <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4m9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-person-workspace" viewBox="0 0 16 16">
+        <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+        <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z"/>
       </svg>,
         label: "Customers",
         route: "/customers",
       },
       {
-        icon:   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-person-workspace" viewBox="0 0 16 16">
-        <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-        <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z"/>
-      </svg>,
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-person-fill-gear" viewBox="0 0 16 16">
+        <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4m9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+      </svg>,  
         label: "Employees",
         route: "/employees",
       },
@@ -67,7 +71,7 @@ const menuGroups = [
         route: "/calendar",
       },
       {
-        icon: <LuLogOut size={24}/>,
+        icon: <TbLogout size={24}/>,
         label: "Logout",
         route: "/auth/signin",
       },
@@ -93,18 +97,18 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5 xl:py-10">
           <Link href="/">
             <Image
-              width={176}
-              height={32}
-              src={"/images/logo/logo-dark.svg"}
+              width={300}
+              height={300}
+              src={"/images/logo/header_logo.png"}
               alt="Logo"
               priority
               className="dark:hidden"
               style={{ width: "auto", height: "auto" }}
             />
             <Image
-              width={176}
-              height={32}
-              src={"/images/logo/logo-dark.svg"}
+              width={300}
+              height={300}
+              src={"/images/logo/header_logo.png"}
               alt="Logo"
               priority
               className="hidden dark:block"
@@ -154,43 +158,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               </div>
             ))}
           </nav>
-          {/* <nav className="relative mt-5 px-4 lg:px-6">
-            <div className="absolute inset-x-0 bottom-0">
-              <ul className="mb-2 flex flex-col gap-2">
-                <li className="text-lg font-regular px-6">
-                  <Link href="/auth/signin">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      width="24"
-                      height="24"
-                      viewBox="0,0,256,256"
-                      fill="#1111"
-                    ></svg>
-                    Logout
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </nav> */}
-          {/* <div>
-            <ul className="mb-6 flex flex-col gap-2">
-              <li>
-                <Link href="/auth/signin">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="24"
-                    height="24"
-                    viewBox="0,0,256,256"
-                  ></svg>
-                  Logout
-                </Link>
-              </li>
-            </ul>
-          </div> */}
+          <div className="absolute bottom-5">
+            <Footer />
+          </div>
         </div>
       </aside>
     </ClickOutside>

@@ -16,10 +16,7 @@ const Login = () => {
               href="#"
               className="flex items-center justify-center text-2xl font-semibold text-gray-900 "
             >
-              <img
-                className="w-[50%] h-auto p-6"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_HKLxlwH7VAJzZLN-BFB11PQVhpw9aafoMAEbCzIAn7xvXIKGzqcbctsDlteeaYXsQ&usqp=CAU"
-                alt="logo"
+              <Image src="/images/logo/header_logo.png" width={300} height={0} alt="login"
               />
             </a>
             <div className="p-4 space-y-4 md:space-y-6 sm:p-8">
@@ -70,13 +67,7 @@ const Login = () => {
                     Login
                   </button>
                 </Link>
-                <p className="flex items-center justify-between text-sm font-light text-gray-500 ">
-                  <a
-                    href="#"
-                    className="font-medium text-gray-400 text-left hover:underline hover:text-black "
-                  >
-                    New Registration?
-                  </a>
+                <p className="flex items-center justify-left text-sm font-light text-gray-500 ">
                   <a
                     href="#"
                     className="text-sm font-medium text-gray-400 hover:underline hover:text-black "
