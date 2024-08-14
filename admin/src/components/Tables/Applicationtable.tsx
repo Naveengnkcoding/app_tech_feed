@@ -1,6 +1,7 @@
 "use client";
 import next from "next";
 import { useState, useEffect } from "react";
+import { useMemo } from "react";
 import Applicationrow from "./Applicationrow";
 
 const data = [
@@ -16,7 +17,27 @@ const data = [
   },
   {
     sno: 1,
-    engname: "Engineer",
+    engname: "Harish",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "New Installation",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Naveen",
+    appno: 1201,
+    comp: "Company",
+    custname: "Customer",
+    drtype: "Driver",
+    srtype: "New Installation",
+    status: "completed",
+  },
+  {
+    sno: 1,
+    engname: "Salah",
     appno: 1201,
     comp: "Company",
     custname: "Customer",
@@ -26,67 +47,47 @@ const data = [
   },
   {
     sno: 1,
-    engname: "Engineer",
+    engname: "Kavi",
     appno: 1201,
     comp: "Company",
     custname: "Customer",
     drtype: "Driver",
-    srtype: "Service",
-    status: "completed",
+    srtype: "New Service",
+    status: "failed",
   },
   {
     sno: 1,
-    engname: "Engineer",
+    engname: "Karthiga",
     appno: 1201,
     comp: "Company",
     custname: "Customer",
     drtype: "Driver",
-    srtype: "Service",
-    status: "completed",
+    srtype: "New Check",
+    status: "failed",
   },
   {
     sno: 1,
-    engname: "Engineer",
+    engname: "Raji",
     appno: 1201,
     comp: "Company",
     custname: "Customer",
     drtype: "Driver",
-    srtype: "Service",
+    srtype: "New Service",
     status: "completed",
   },
   {
     sno: 1,
-    engname: "Engineer",
+    engname: "Kabil",
     appno: 1201,
     comp: "Company",
     custname: "Customer",
     drtype: "Driver",
-    srtype: "Service",
-    status: "completed",
+    srtype: "New Check",
+    status: "pending",
   },
   {
     sno: 1,
-    engname: "Engineer",
-    appno: 1201,
-    comp: "Company",
-    custname: "Customer",
-    drtype: "Driver",
-    srtype: "Service",
-    status: "completed",
-  },
-  {
-    sno: 1,
-    engname: "Engineer",
-    appno: 1201,
-    comp: "Company",
-    custname: "Customer",
-    drtype: "Driver",
-    srtype: "Service",
-    status: "completed",
-  },
-  {
-    sno: 1,
-    engname: "Engineer",
+    engname: "CEO",
     appno: 1201,
     comp: "Company",
     custname: "Customer",
@@ -118,6 +119,34 @@ const Applicationtable = () => {
   const [monthOpen, setMonthOpen] = useState(false);
   const currentMonth = new Date().getMonth();
 
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedServiceType, setSelectedServiceType] = useState("");
+  const [selectedStatus, setSelectedStatus] = useState("");
+
+  useEffect(() => {
+    console.log("Component re-rendered. Search term:", searchTerm);
+  }, [searchTerm]);
+
+  const handleSearchChange = (e: any) => {
+    console.log("Search input changed:", e.target.value);
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredData = useMemo(() => {
+    console.log("Filtering data...");
+    return data.filter((row) => {
+      const matchesSearch = Object.values(row).some((value) =>
+        value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      const matchesServiceType =
+        selectedServiceType === "" ||
+        row.srtype.toLowerCase().includes(selectedServiceType.toLowerCase());
+      const matchesStatus =
+        selectedStatus === "" || row.status.toLowerCase() === selectedStatus.toLowerCase();
+      return matchesSearch && matchesServiceType && matchesStatus;
+    });
+  }, [searchTerm, selectedServiceType, selectedStatus]);
+
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
@@ -135,7 +164,10 @@ const Applicationtable = () => {
   };
 
   return (
-    <div className="relative overflow-x-auto sm:rounded-lg">
+    <div
+      className="relative overflow-x-auto sm:rounded-lg"
+      key={searchTerm + selectedServiceType + selectedStatus}
+    >
       <div className="flex-column justify-left flex flex-wrap items-center gap-4 space-y-6 pb-2 sm:flex-row sm:space-y-0">
         <label className="sr-only">Search</label>
         <div className="relative">
@@ -157,6 +189,8 @@ const Applicationtable = () => {
           <input
             type="text"
             id="table-search"
+            value={searchTerm}
+            onChange={handleSearchChange}
             className="block w-100 rounded-lg border border-gray-600 bg-gray-50 p-2 ps-10 text-sm text-gray-900 focus:border focus:border-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="Search for items"
           />
@@ -198,7 +232,7 @@ const Applicationtable = () => {
               aria-haspopup="true"
               onClick={toggleDrop}
             >
-              Service type
+              {selectedServiceType || "Service type"}
               <svg
                 className="-mr-1 ml-2 h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -222,27 +256,22 @@ const Applicationtable = () => {
               aria-labelledby="menu-button"
             >
               <div className="py-1" role="none">
-                <a
-                  href="#"
-                  className="block px-9 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
-                  role="menuitem"
-                >
-                  New installation
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
-                  role="menuitem"
-                >
-                  New service
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
-                  role="menuitem"
-                >
-                  New check
-                </a>
+                {["New installation", "New service", "New check"].map(
+                  (type) => (
+                    <a
+                      key={type}
+                      href="#"
+                      className="block px-4 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
+                      role="menuitem"
+                      onClick={() => {
+                        setSelectedServiceType(type);
+                        setOpen(false);
+                      }}
+                    >
+                      {type}
+                    </a>
+                  ),
+                )}
               </div>
             </div>
           )}
@@ -257,7 +286,7 @@ const Applicationtable = () => {
               aria-haspopup="true"
               onClick={toggleDown}
             >
-              Status
+              {selectedStatus || "Status"}
               <svg
                 className="-mr-1 ml-2 h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -281,27 +310,20 @@ const Applicationtable = () => {
               aria-labelledby="menu-button"
             >
               <div className="py-1" role="none">
-                <a
-                  href="#"
-                  className="block px-14 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
-                  role="menuitem"
-                >
-                  Completed
-                </a>
-                <a
-                  href="#"
-                  className="block px-14 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
-                  role="menuitem"
-                >
-                  Pending
-                </a>
-                <a
-                  href="#"
-                  className="block px-14 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
-                  role="menuitem"
-                >
-                  Failed
-                </a>
+                {["Completed", "Pending", "Failed"].map((status) => (
+                  <a
+                    key={status}
+                    href="#"
+                    className="block px-14 py-2 text-lg text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600"
+                    role="menuitem"
+                    onClick={() => {
+                      setSelectedStatus(status);
+                      setDownopen(false);
+                    }}
+                  >
+                    {status}
+                  </a>
+                ))}
               </div>
             </div>
           )}
@@ -391,7 +413,7 @@ const Applicationtable = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((row) => (
+            {filteredData.map((row) => (
               <Applicationrow key={row.sno} row={row} />
             ))}
           </tbody>
